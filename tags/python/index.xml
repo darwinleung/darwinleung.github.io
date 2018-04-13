@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on DL</title>
+    <link>https://darwinleung.github.io/tags/python/</link>
+    <description>Recent content in Python on DL</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 30 Mar 2018 12:37:00 -0400</lastBuildDate>
+    
+	<atom:link href="https://darwinleung.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Running python 2 and 3 using conda</title>
+      <link>https://darwinleung.github.io/posts/2018-03-30-running-python-2-and-3-using-conda/</link>
+      <pubDate>Fri, 30 Mar 2018 12:37:00 -0400</pubDate>
+      
+      <guid>https://darwinleung.github.io/posts/2018-03-30-running-python-2-and-3-using-conda/</guid>
+      <description>Running python 2 and 3 using conda I am taking the M101P course to brush up my Mongo skill, the course is kind of dated, it uses Python 2. However, I use Python 3 on my machine by default. I need a quick and easy way to run python 2 scripts without changing my default settings/path. I found conda offer a great out-of-box solution by using environment.
+ A conda environment is a directory that contains a specific collection of conda packages that you have installed.</description>
+    </item>
+    
+  </channel>
+</rss>

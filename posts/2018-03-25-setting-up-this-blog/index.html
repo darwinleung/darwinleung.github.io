@@ -102,6 +102,27 @@
         <i class="fas fa-calendar-alt"></i> Mar 25, 2018
       
       
+        
+        
+            in
+            
+            
+                <a class="meta" href="/categories/programming">PROGRAMMING</a>
+                
+            
+        
+      
+      
+      
+        
+        
+            <br/>
+             <i class="fas fa-tags"></i>
+            
+            <a class="meta" href="/tags/git">git</a> 
+        
+            <a class="meta" href="/tags/hugo">hugo</a>
+        
       
       
       </span>  
@@ -198,19 +219,28 @@ Note:  <code>\static</code> should be empty. Originally I modify it from the the
 PygmentsStyle = <span style="color:#ed9d13">&#34;native&#34;</span></code></pre></div>
 <h2 id="hosting-on-github">Hosting on Github</h2>
 
-<p><a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">https://gohugo.io/hosting-and-deployment/hosting-on-github/</a></p>
+<p>Once everything look okay locally, the last step is to host it on Github pages. I follow the <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github">guide</a> from Hugo.</p>
+
+<p>Basic steps:</p>
 
 <ol>
-<li>Create 2 repo: darwinleung.github.io and blog-test</li>
-<li>git clone to empty directory, copy content over</li>
-<li>rm -rf public</li>
-<li>git submodule add -b master <a href="https://github.com/darwinleung/darwinleung.github.io.git">https://github.com/darwinleung/darwinleung.github.io.git</a> public</li>
-<li>deploy.sh</li>
+<li>Create 2 repo: <code>darwinleung.github.io</code> and <code>personal-blog</code></li>
+<li>Add my local blog folder to the personal-blog github repo, more info <a href="https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/">here</a></li>
+<li>Remove the public folder inside the blog folder: <code>rm -rf public</code></li>
+<li><code>git submodule add -b master https://github.com/darwinleung/darwinleung.github.io.git public</code></li>
+<li>Run <code>hugo</code> inside blog folder to generate the <code>public</code> folder</li>
+<li>Run <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/#put-it-into-a-script">deploy.sh</a></li>
 </ol>
 
-<h2 id="workflow">workflow</h2>
+<h2 id="workflow"><strong>Workflow</strong></h2>
 
-<p>test 1.0</p>
+<p>It is simple to add new posts or make any updates to my blog site.</p>
+
+<ol>
+<li>Make changes within the local blog folder</li>
+<li>Push changes to github repo <code>personal-blog</code></li>
+<li>Run deploy.sh</li>
+</ol>
 
 </div>
             <div class="footer">

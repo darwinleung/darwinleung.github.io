@@ -6,9 +6,64 @@
     <description>Recent content in Tags on DL</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Fri, 30 Mar 2018 12:37:00 -0400</lastBuildDate>
     
 	<atom:link href="https://darwinleung.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Conda</title>
+      <link>https://darwinleung.github.io/tags/conda/</link>
+      <pubDate>Fri, 30 Mar 2018 12:37:00 -0400</pubDate>
+      
+      <guid>https://darwinleung.github.io/tags/conda/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gaming</title>
+      <link>https://darwinleung.github.io/tags/gaming/</link>
+      <pubDate>Mon, 26 Mar 2018 22:40:00 -0400</pubDate>
+      
+      <guid>https://darwinleung.github.io/tags/gaming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>https://darwinleung.github.io/tags/git/</link>
+      <pubDate>Sun, 25 Mar 2018 14:47:00 -0400</pubDate>
+      
+      <guid>https://darwinleung.github.io/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://darwinleung.github.io/tags/hugo/</link>
+      <pubDate>Sun, 25 Mar 2018 14:47:00 -0400</pubDate>
+      
+      <guid>https://darwinleung.github.io/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mongodb</title>
+      <link>https://darwinleung.github.io/tags/mongodb/</link>
+      <pubDate>Fri, 30 Mar 2018 12:37:00 -0400</pubDate>
+      
+      <guid>https://darwinleung.github.io/tags/mongodb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://darwinleung.github.io/tags/python/</link>
+      <pubDate>Fri, 30 Mar 2018 12:37:00 -0400</pubDate>
+      
+      <guid>https://darwinleung.github.io/tags/python/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

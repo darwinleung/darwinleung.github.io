@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gaming on DL</title>
+    <link>https://darwinleung.github.io/tags/gaming/</link>
+    <description>Recent content in Gaming on DL</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 26 Mar 2018 22:40:00 -0400</lastBuildDate>
+    
+	<atom:link href="https://darwinleung.github.io/tags/gaming/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Limbo</title>
+      <link>https://darwinleung.github.io/posts/2018-03-26-limbo/</link>
+      <pubDate>Mon, 26 Mar 2018 22:40:00 -0400</pubDate>
+      
+      <guid>https://darwinleung.github.io/posts/2018-03-26-limbo/</guid>
+      <description>We finished a indie game called &amp;ldquo;Limbo&amp;rdquo; over the weekend. Personally I like it very much, It is a short, simple, monochrome, 2D puzzle solving game. Although there is no exciting story or flashy graphic, the music and animation is outstanding, puzzles are well designed, it kept us engaged for hours.
+I bought this game long time ago, never get time to try it until this Saturday I was downloading another large game, I decided to give it a try while we wait.</description>
+    </item>
+    
+  </channel>
+</rss>

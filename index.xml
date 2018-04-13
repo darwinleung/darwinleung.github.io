@@ -6,10 +6,30 @@
     <description>Recent content on DL</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 25 Mar 2018 14:47:00 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 30 Mar 2018 12:37:00 -0400</lastBuildDate>
     
 	<atom:link href="https://darwinleung.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Running python 2 and 3 using conda</title>
+      <link>https://darwinleung.github.io/posts/2018-03-30-running-python-2-and-3-using-conda/</link>
+      <pubDate>Fri, 30 Mar 2018 12:37:00 -0400</pubDate>
+      
+      <guid>https://darwinleung.github.io/posts/2018-03-30-running-python-2-and-3-using-conda/</guid>
+      <description>Running python 2 and 3 using conda I am taking the M101P course to brush up my Mongo skill, the course is kind of dated, it uses Python 2. However, I use Python 3 on my machine by default. I need a quick and easy way to run python 2 scripts without changing my default settings/path. I found conda offer a great out-of-box solution by using environment.
+ A conda environment is a directory that contains a specific collection of conda packages that you have installed.</description>
+    </item>
+    
+    <item>
+      <title>Limbo</title>
+      <link>https://darwinleung.github.io/posts/2018-03-26-limbo/</link>
+      <pubDate>Mon, 26 Mar 2018 22:40:00 -0400</pubDate>
+      
+      <guid>https://darwinleung.github.io/posts/2018-03-26-limbo/</guid>
+      <description>We finished a indie game called &amp;ldquo;Limbo&amp;rdquo; over the weekend. Personally I like it very much, It is a short, simple, monochrome, 2D puzzle solving game. Although there is no exciting story or flashy graphic, the music and animation is outstanding, puzzles are well designed, it kept us engaged for hours.
+I bought this game long time ago, never get time to try it until this Saturday I was downloading another large game, I decided to give it a try while we wait.</description>
+    </item>
     
     <item>
       <title>Setting up this blog</title>

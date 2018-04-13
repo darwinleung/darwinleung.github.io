@@ -10,5 +10,32 @@
 	<atom:link href="https://darwinleung.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>Data Science</title>
+      <link>https://darwinleung.github.io/categories/data-science/</link>
+      <pubDate>Fri, 30 Mar 2018 12:37:00 -0400</pubDate>
+      
+      <guid>https://darwinleung.github.io/categories/data-science/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fun</title>
+      <link>https://darwinleung.github.io/categories/fun/</link>
+      <pubDate>Mon, 26 Mar 2018 22:40:00 -0400</pubDate>
+      
+      <guid>https://darwinleung.github.io/categories/fun/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Programming</title>
+      <link>https://darwinleung.github.io/categories/programming/</link>
+      <pubDate>Fri, 30 Mar 2018 12:37:00 -0400</pubDate>
+      
+      <guid>https://darwinleung.github.io/categories/programming/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

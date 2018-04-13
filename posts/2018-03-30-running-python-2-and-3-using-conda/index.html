@@ -135,8 +135,6 @@
   
   
 
-<h1 id="running-python-2-and-3-using-conda">Running python 2 and 3 using conda</h1>
-
 <p>I am taking the <a href="https://university.mongodb.com/courses/M101P/about">M101P</a> course to brush up my Mongo skill, the course is kind of dated, it uses Python 2. However, I use Python 3 on my machine by default. I need a quick and easy way to run python 2 scripts without changing my default settings/path. I found conda offer a great out-of-box solution by using <a href="https://conda.io/docs/user-guide/concepts.html">environment</a>.</p>
 
 <blockquote>
@@ -145,41 +143,22 @@
 
 <p>It is perfect for my use case, I can simply create an env for python 2.7 and only use it within the course.</p>
 
-<h2 id="steps">Steps</h2>
+<h2 id="steps"><strong>Steps</strong></h2>
 
 <ol>
-<li>To create a new env for python 2.7 (<a href="https://conda.io/docs/user-guide/tasks/manage-python.html">ref</a>):</li>
+<li>To create a new env for python 2.7 (<a href="https://conda.io/docs/user-guide/tasks/manage-python.html">ref</a>):<br />
+<code>conda create -n py27 python=2.7 anaconda</code><br />
+I got an error saying I already have an env created with the same prefix (py27), nice! it was created by default when I installed Python using Anaconda.</li>
+<li>To get a list of env (<a href="https://conda.io/docs/user-guide/tasks/manage-environments.html#viewing-a-list-of-your-environments">ref</a>), the one you are currently using is highlighted with an * :<br />
+<code>conda info --envs</code></li>
+<li>Next, to activate the py27 env:<br />
+<code>activate py27</code></li>
+<li>Notice the (py27) appear in the beginning of the command prompt, meaning I am currently in the environment, to verify python version:<br />
+<code>python -v</code></li>
+<li>To deactivate an environment:<br />
+<code>deactivate</code>
+If we list the env again, we are back to root.</li>
 </ol>
-
-<p><code>conda create -n py27 python=2.7 anaconda</code></p>
-
-<p>I got an error saying I already have an env created with the same prefix (py27), nice! it was created by default when I installed Python using Anaconda.</p>
-
-<ol>
-<li>To get a list of env (<a href="https://conda.io/docs/user-guide/tasks/manage-environments.html#viewing-a-list-of-your-environments">ref</a>), the one you are currently using is highlighted with an * :</li>
-</ol>
-
-<p><code>conda info --envs</code></p>
-
-<ol>
-<li>Next, to activate the py27 env:</li>
-</ol>
-
-<p><code>activate py27</code></p>
-
-<ol>
-<li>Notice the (py27) appear in the beginning of the command prompt, meaning you are currently in the environment, to verify python version:</li>
-</ol>
-
-<p><code>python -V</code></p>
-
-<ol>
-<li>To deactivate an environment:</li>
-</ol>
-
-<p><code>deactivate</code></p>
-
-<p>And list the env again, you will see we are back to root.</p>
 
 </div>
             <div class="footer">

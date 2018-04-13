@@ -17,7 +17,7 @@
       <pubDate>Fri, 30 Mar 2018 12:37:00 -0400</pubDate>
       
       <guid>https://darwinleung.github.io/posts/2018-03-30-running-python-2-and-3-using-conda/</guid>
-      <description>Running python 2 and 3 using conda I am taking the M101P course to brush up my Mongo skill, the course is kind of dated, it uses Python 2. However, I use Python 3 on my machine by default. I need a quick and easy way to run python 2 scripts without changing my default settings/path. I found conda offer a great out-of-box solution by using environment.
+      <description>I am taking the M101P course to brush up my Mongo skill, the course is kind of dated, it uses Python 2. However, I use Python 3 on my machine by default. I need a quick and easy way to run python 2 scripts without changing my default settings/path. I found conda offer a great out-of-box solution by using environment.
  A conda environment is a directory that contains a specific collection of conda packages that you have installed.</description>
     </item>
     
@@ -38,7 +38,8 @@ I bought this game long time ago, never get time to try it until this Saturday I
       
       <guid>https://darwinleung.github.io/posts/2018-03-25-setting-up-this-blog/</guid>
       <description>Hugo First, I follow the quick start guide to install and set up a hugo server locally.
-Customize theme Picking theme There are hundreds of themes available on the hugo site. At first, I picked hyde to start with, I like the simplistic two-column design. Hyde is originally a Jekyll theme, it was ported by the creator of Hugo @spf13. As one of the most basic and popular theme, I think it would be a good theme to begin with.</description>
+Adding content Use hugo new posts/my-first-post.md or simply add a markdown file under the content\posts folder. Make sure the markdown files include the front matter, in a regular post page, it looks something like:
+title: &amp;quot;Setting up this blog&amp;quot; date: 2018-03-25T14:47:00-04:00 draft: false tags: [ &amp;quot;hugo&amp;quot; , &amp;quot;git&amp;quot; ] categories: [ &amp;quot;programming&amp;quot; ]  For a static page like &amp;ldquo;About&amp;rdquo; or &amp;ldquo;Contact&amp;rdquo;, I only use title and draft.</description>
     </item>
     
     <item>

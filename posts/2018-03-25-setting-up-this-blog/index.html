@@ -134,6 +134,19 @@
 
 <p>First, I follow the <a href="https://gohugo.io/getting-started/quick-start/">quick start guide</a> to install and set up a hugo server locally.</p>
 
+<h2 id="adding-content"><strong>Adding content</strong></h2>
+
+<p>Use <code>hugo new posts/my-first-post.md</code> or simply add a markdown file under the <code>content\posts</code> folder. Make sure the markdown files include the <a href="https://gohugo.io/content-management/front-matter/">front matter</a>, in a regular post page, it looks something like:</p>
+
+<pre><code>title: &quot;Setting up this blog&quot;
+date: 2018-03-25T14:47:00-04:00
+draft: false
+tags: [ &quot;hugo&quot; , &quot;git&quot; ]
+categories: [ &quot;programming&quot; ]
+</code></pre>
+
+<p>For a static page like &ldquo;About&rdquo; or &ldquo;Contact&rdquo;, I only use title and draft.</p>
+
 <h2 id="customize-theme"><strong>Customize theme</strong></h2>
 
 <h3 id="picking-theme"><strong>Picking theme</strong></h3>
@@ -237,7 +250,7 @@ PygmentsStyle = <span style="color:#ed9d13">&#34;native&#34;</span></code></pre>
 <p>It is simple to add new posts or make any updates to my blog site.</p>
 
 <ol>
-<li>Make changes within the local blog folder</li>
+<li>Make changes within the local blog folder, you can preview the changes locally by <code>hugo server -D</code></li>
 <li>Push changes to github repo <code>personal-blog</code></li>
 <li>Run deploy.sh</li>
 </ol>

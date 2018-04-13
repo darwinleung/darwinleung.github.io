@@ -17,7 +17,7 @@
       <pubDate>Fri, 30 Mar 2018 12:37:00 -0400</pubDate>
       
       <guid>https://darwinleung.github.io/posts/2018-03-30-running-python-2-and-3-using-conda/</guid>
-      <description>Running python 2 and 3 using conda I am taking the M101P course to brush up my Mongo skill, the course is kind of dated, it uses Python 2. However, I use Python 3 on my machine by default. I need a quick and easy way to run python 2 scripts without changing my default settings/path. I found conda offer a great out-of-box solution by using environment.
+      <description>I am taking the M101P course to brush up my Mongo skill, the course is kind of dated, it uses Python 2. However, I use Python 3 on my machine by default. I need a quick and easy way to run python 2 scripts without changing my default settings/path. I found conda offer a great out-of-box solution by using environment.
  A conda environment is a directory that contains a specific collection of conda packages that you have installed.</description>
     </item>
     

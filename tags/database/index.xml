@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>DL</title>
-    <link>https://darwinleung.github.io/</link>
-    <description>Recent content on DL</description>
+    <title>Database on DL</title>
+    <link>https://darwinleung.github.io/tags/database/</link>
+    <description>Recent content in Database on DL</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 04 Apr 2018 12:00:00 -0400</lastBuildDate>
     
-	<atom:link href="https://darwinleung.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://darwinleung.github.io/tags/database/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -51,58 +51,6 @@ What is index? From MySQL documentation:
       <description>This is a list of handy SQL queries I use, I will keep it updated occasionally.
 Getting table sizes in MySQL This query lists the size of every table in every database in an MySQL instance, size sorted desc in MB:
 SELECT table_schema as `Database`, table_name AS `Table`, round(((data_length + index_length) / 1024 / 1024), 2) `Size in MB` FROM information_schema.TABLES ORDER BY (data_length + index_length) DESC;	 ref: SO</description>
-    </item>
-    
-    <item>
-      <title>Running python 2 and 3 using conda</title>
-      <link>https://darwinleung.github.io/posts/2018-03-30-running-python-2-and-3-using-conda/</link>
-      <pubDate>Fri, 30 Mar 2018 12:37:00 -0400</pubDate>
-      
-      <guid>https://darwinleung.github.io/posts/2018-03-30-running-python-2-and-3-using-conda/</guid>
-      <description>I am taking the M101P course to brush up my Mongo skill, the course is kind of dated, it uses Python 2. However, I use Python 3 on my machine by default. I need a quick and easy way to run python 2 scripts without changing my default settings/path. I found conda offer a great out-of-box solution by using environment.
- A conda environment is a directory that contains a specific collection of conda packages that you have installed.</description>
-    </item>
-    
-    <item>
-      <title>Limbo</title>
-      <link>https://darwinleung.github.io/posts/2018-03-26-limbo/</link>
-      <pubDate>Mon, 26 Mar 2018 22:40:00 -0400</pubDate>
-      
-      <guid>https://darwinleung.github.io/posts/2018-03-26-limbo/</guid>
-      <description>We finished a indie game called &amp;ldquo;Limbo&amp;rdquo; over the weekend. Personally I like it very much, It is a short, simple, monochrome, 2D puzzle solving game. Although there is no exciting story or flashy graphic, the music and animation is outstanding, puzzles are well designed, it kept us engaged for hours.
-I bought this game long time ago, never get time to try it until this Saturday I was downloading another large game, I decided to give it a try while we wait.</description>
-    </item>
-    
-    <item>
-      <title>Setting up this blog with Hugo and Hyde-hyde</title>
-      <link>https://darwinleung.github.io/posts/2018-03-25-setting-up-this-blog/</link>
-      <pubDate>Sun, 25 Mar 2018 14:47:00 -0400</pubDate>
-      
-      <guid>https://darwinleung.github.io/posts/2018-03-25-setting-up-this-blog/</guid>
-      <description>Hugo First, I follow the quick start guide to install and set up a hugo server locally.
-Adding content Use hugo new posts/my-first-post.md or simply add a markdown file under the content\posts folder. Make sure the markdown files include the front matter, in a regular post page, it looks something like:
-title: &amp;quot;Setting up this blog&amp;quot; date: 2018-03-25T14:47:00-04:00 draft: false tags: [ &amp;quot;hugo&amp;quot; , &amp;quot;git&amp;quot; ] categories: [ &amp;quot;programming&amp;quot; ]  For a static page like &amp;ldquo;About&amp;rdquo; or &amp;ldquo;Contact&amp;rdquo;, I only use title and draft.</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://darwinleung.github.io/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darwinleung.github.io/about/</guid>
-      <description>My name is Darwin Leung, I am an aspiring data scientist based in Toronto, ON, Canada.
-I am working at Shared as a data science engineer.
-I studied Statistics at the University of Waterloo.</description>
-    </item>
-    
-    <item>
-      <title>Contact</title>
-      <link>https://darwinleung.github.io/contact/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://darwinleung.github.io/contact/</guid>
-      <description>Website: https://darwinleung.github.io
-Email: darwinlkh@gmail.com</description>
     </item>
     
   </channel>

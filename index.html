@@ -99,6 +99,52 @@
             <div class="posts">
   
         <div class="post">
+        <h1 class="post-title"><a href="https://darwinleung.github.io/posts/2018-04-04-sql-optimization-with-indexing-part-2/">SQL optimization with indexing - part 3 - multi-column index</a></h1>
+        <span class="post-date">Apr 4, 2018</span>
+        MySQL can only use one index for each SELECT statement, it is very common to perform operations on multiple columns like:
+SELECT gaAppIds, dimension_date, dimension_country, dimension_source, dimension_medium, SUM(metric_sessions) FROM country_analytics GROUP BY gaAppIds , dimension_date , dimension_source , dimension_medium , dimension_country; By using a single-column index, we cannot take the full advantage for this query. We can add index for multiple columns (up to 16 columns). In the example above, we can add the following index with the 5 columns in the GROUP BY :
+        
+        <div class="read-more-link">
+            <a href="/posts/2018-04-04-sql-optimization-with-indexing-part-2/">Read More…</a>
+        </div>
+        
+        </div>
+        <div class="post">
+        <h1 class="post-title"><a href="https://darwinleung.github.io/posts/2018-04-03-sql-optimization-with-indexing-part-2/">SQL optimization with indexing - part 2 - index types in MySQL</a></h1>
+        <span class="post-date">Apr 3, 2018</span>
+        There are 2 main data structures for index in MySQL, they are B-tree and hash table. They are also the main index structures for other RMDBS.
+B-tree B-tree is a self-balancing sorted data structure similar to a binary search tree. The only difference is that a node in B-tree can have more than 2 children. For me, it looks like a binary tree with a range of numbers in each node (vs only 1 number in a node).
+        
+        <div class="read-more-link">
+            <a href="/posts/2018-04-03-sql-optimization-with-indexing-part-2/">Read More…</a>
+        </div>
+        
+        </div>
+        <div class="post">
+        <h1 class="post-title"><a href="https://darwinleung.github.io/posts/2018-04-02-sql-optimization-with-indexing-part-1/">SQL optimization with indexing - part 1</a></h1>
+        <span class="post-date">Apr 2, 2018</span>
+        Knowing how to write a query is not enough, when our tables grow larger it is common to run into query performance issues. If we know in advance how we are querying the table, one very handful technique to &ldquo;magically&rdquo; speed up the query is to add appropriate indexes in tables.
+What is index? From MySQL documentation:
+ Indexes are used to find rows with specific column values quickly. Without an index, MySQL must begin with the first row and then read through the entire table to find the relevant rows.
+        
+        <div class="read-more-link">
+            <a href="/posts/2018-04-02-sql-optimization-with-indexing-part-1/">Read More…</a>
+        </div>
+        
+        </div>
+        <div class="post">
+        <h1 class="post-title"><a href="https://darwinleung.github.io/posts/2018-04-01-handy-sql-queries/">Handy SQL Queries</a></h1>
+        <span class="post-date">Apr 1, 2018</span>
+        This is a list of handy SQL queries I use, I will keep it updated occasionally.
+Getting table sizes in MySQL This query lists the size of every table in every database in an MySQL instance, size sorted desc in MB:
+SELECT table_schema as `Database`, table_name AS `Table`, round(((data_length + index_length) / 1024 / 1024), 2) `Size in MB` FROM information_schema.TABLES ORDER BY (data_length + index_length) DESC;	 ref: SO
+        
+        <div class="read-more-link">
+            <a href="/posts/2018-04-01-handy-sql-queries/">Read More…</a>
+        </div>
+        
+        </div>
+        <div class="post">
         <h1 class="post-title"><a href="https://darwinleung.github.io/posts/2018-03-30-running-python-2-and-3-using-conda/">Running python 2 and 3 using conda</a></h1>
         <span class="post-date">Mar 30, 2018</span>
         I am taking the M101P course to brush up my Mongo skill, the course is kind of dated, it uses Python 2. However, I use Python 3 on my machine by default. I need a quick and easy way to run python 2 scripts without changing my default settings/path. I found conda offer a great out-of-box solution by using environment.

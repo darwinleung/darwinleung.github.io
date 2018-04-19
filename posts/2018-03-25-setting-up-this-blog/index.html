@@ -163,25 +163,22 @@ categories: [ &quot;programming&quot; ]
 <h3 id="changing-config-toml"><strong>Changing config.toml</strong></h3>
 
 <p>First step is to modify config.toml to personalize your site. Set theme = &ldquo;hyde-hyde&rdquo; to use selected theme. Change the title, description, update social accounts etc. Set up the menu menu in the side bar:</p>
-
-<pre><code class="language-toml">## Main Menu
-[[menu.main]]
-    name = &quot;Posts&quot;
-    weight = 100
-    identifier = &quot;posts&quot;
-    url = &quot;/posts/&quot;
-[[menu.main]]
-    name = &quot;About&quot;
-    identifier = &quot;about&quot;
-    weight = 200
-    url = &quot;/about/&quot;
-[[menu.main]]
-    name = &quot;Contact&quot;
-    identifier = &quot;contact&quot;
-    weight = 300
-    url = &quot;/contact/&quot;
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#75715e">## Main Menu</span>
+[[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+    <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Posts&#34;</span>
+    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">100</span>
+    <span style="color:#a6e22e">identifier</span> = <span style="color:#e6db74">&#34;posts&#34;</span>
+    <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/posts/&#34;</span>
+[[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+    <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;About&#34;</span>
+    <span style="color:#a6e22e">identifier</span> = <span style="color:#e6db74">&#34;about&#34;</span>
+    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">200</span>
+    <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/about/&#34;</span>
+[[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+    <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Contact&#34;</span>
+    <span style="color:#a6e22e">identifier</span> = <span style="color:#e6db74">&#34;contact&#34;</span>
+    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">300</span>
+    <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/contact/&#34;</span></code></pre></div>
 <h3 id="background-color"><strong>Background color</strong></h3>
 
 <p>There are 8 default color scheme out of the box in hyde:</p>
@@ -198,17 +195,14 @@ Note:  <code>\static</code> should be empty. Originally I modify it from the the
 
 <li><p>Near the bottom of the <code>hyde.css</code>, I copied one of theme and the added</p></li>
 </ol>
-
-<pre><code class="language-css">   /* Dark blue &amp; dark red*/
-   .theme-base-0g .sidebar {
-     background-color: #212F3D;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">   <span style="color:#75715e">/* Dark blue &amp; dark red*/</span>
+   .<span style="color:#a6e22e">theme-base-0g</span> .<span style="color:#a6e22e">sidebar</span> {
+     <span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#212F3D</span>;
    }
-   .theme-base-0g .content a,
-   .theme-base-0g .related-posts li a:hover {
-     color: #943126;
-   }
-</code></pre>
-
+   .<span style="color:#a6e22e">theme-base-0g</span> .<span style="color:#a6e22e">content</span> <span style="color:#f92672">a</span><span style="color:#f92672">,</span>
+   .<span style="color:#a6e22e">theme-base-0g</span> .<span style="color:#a6e22e">related-posts</span> <span style="color:#f92672">li</span> <span style="color:#f92672">a</span>:<span style="color:#a6e22e">hover</span> {
+     <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#943126</span>;
+   }</code></pre></div>
 <p>You can also change the accent color on the post title. I looked up the HTML color codes from this <a href="https://htmlcolorcodes.com/">site</a>.</p>
 
 <ol>
@@ -224,17 +218,14 @@ Note:  <code>\static</code> should be empty. Originally I modify it from the the
 <p>We can also change the font size and family from <code>custom.css</code>.</p>
 
 <p>I modified the font-family and font-size to:</p>
-
-<pre><code class="language-css">html,
-body
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">html</span><span style="color:#f92672">,</span>
+<span style="color:#f92672">body</span>
 {
-    font-family: &quot;Century Gothic&quot;, CenturyGothic, AppleGothic, sans-serif;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 1.5;
-}
-</code></pre>
-
+    <span style="color:#66d9ef">font-family</span>: <span style="color:#e6db74">&#34;Century Gothic&#34;</span>, CenturyGothic, AppleGothic, <span style="color:#66d9ef">sans-serif</span>;
+    <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">16</span><span style="color:#66d9ef">px</span>;
+    <span style="color:#66d9ef">font-weight</span>: <span style="color:#ae81ff">300</span>;
+    <span style="color:#66d9ef">line-height</span>: <span style="color:#ae81ff">1.5</span>;
+}</code></pre></div>
 <p>I used <a href="https://www.cssfontstack.com">cssfontstack.com</a> to find a collection of web safe CSS font.</p>
 
 <h3 id="favicon"><strong>Favicon</strong></h3>
@@ -246,25 +237,19 @@ body
 <p>Next, I tried to find the corresponding place hugo specifying the favicon location. It is in the <code>/theme/hyde-hyde/layouts/partials/header.html</code></p>
 
 <p>Near the bottom, I added:</p>
-
-<pre><code class="language-html">    {{ &quot;&lt;!-- Icons --&gt;&quot; | safeHTML }}
-    &lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;144x144&quot; href=&quot;/apple-touch-icon-144-precomposed.png&quot;&gt;
-    &lt;link rel=&quot;shortcut icon&quot; href=&quot;/favicon.png&quot;&gt;
-    &lt;link rel=&quot;apple-touch-icon&quot; sizes=&quot;76x76&quot; href=&quot;/apple-touch-icon.png&quot;&gt;
-    &lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; sizes=&quot;32x32&quot; href=&quot;/favicon-32x32.png&quot;&gt;
-    &lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; sizes=&quot;16x16&quot; href=&quot;/favicon-16x16.png&quot;&gt;
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    {{ &#34;<span style="color:#75715e">&lt;!-- Icons --&gt;</span>&#34; | safeHTML }}
+    &lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;apple-touch-icon-precomposed&#34;</span> <span style="color:#a6e22e">sizes</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;144x144&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/apple-touch-icon-144-precomposed.png&#34;</span>&gt;
+    &lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;shortcut icon&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/favicon.png&#34;</span>&gt;
+    &lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;apple-touch-icon&#34;</span> <span style="color:#a6e22e">sizes</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;76x76&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/apple-touch-icon.png&#34;</span>&gt;
+    &lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;icon&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;image/png&#34;</span> <span style="color:#a6e22e">sizes</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;32x32&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/favicon-32x32.png&#34;</span>&gt;
+    &lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;icon&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;image/png&#34;</span> <span style="color:#a6e22e">sizes</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;16x16&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/favicon-16x16.png&#34;</span>&gt;</code></pre></div>
 <h3 id="code-syntax-highlighting"><strong>Code syntax highlighting</strong></h3>
 
 <p>I noticed that the hyde-hyde theme has its own syntax.css that is not in the hyde theme.</p>
 
 <p>By theme default, the text is in white with black background color. There were some issues for code block, I <a href="https://stackoverflow.com/questions/38821339/hugo-pygments-how-to-change-highlighting-theme">fixed</a> it by adding these on the config.toml. A subset of list of Pygment style is available <a href="https://help.farbox.com/pygments.html">here</a>.</p>
-
-<pre><code class="language-toml">PygmentsCodeFences = true
-PygmentsStyle = &quot;monokai&quot;
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">PygmentsCodeFences</span> = <span style="color:#66d9ef">true</span>
+<span style="color:#a6e22e">PygmentsStyle</span> = <span style="color:#e6db74">&#34;monokai&#34;</span></code></pre></div>
 <p>Update (04-18-2018): I switched to another highlighting style from <code>config.toml</code> <code>[param]</code> by adding <code>highlightjsstyle = &quot;dark&quot;</code>.</p>
 
 <p>##<strong>Hosting on Github</strong></p>

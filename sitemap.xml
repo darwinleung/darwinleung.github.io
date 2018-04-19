@@ -3,6 +3,26 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://darwinleung.github.io/posts/2018-04-04-sql-optimization-with-indexing-part-2/</loc>
+    <lastmod>2018-04-04T12:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://darwinleung.github.io/posts/2018-04-03-sql-optimization-with-indexing-part-2/</loc>
+    <lastmod>2018-04-03T12:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://darwinleung.github.io/posts/2018-04-02-sql-optimization-with-indexing-part-1/</loc>
+    <lastmod>2018-04-02T12:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://darwinleung.github.io/posts/2018-04-01-handy-sql-queries/</loc>
+    <lastmod>2018-04-01T12:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://darwinleung.github.io/posts/2018-03-30-running-python-2-and-3-using-conda/</loc>
     <lastmod>2018-03-30T12:37:00-04:00</lastmod>
   </url>
@@ -38,13 +58,25 @@
   
   <url>
     <loc>https://darwinleung.github.io/</loc>
-    <lastmod>2018-03-30T12:37:00-04:00</lastmod>
+    <lastmod>2018-04-04T12:00:00-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://darwinleung.github.io/categories/data-engineering/</loc>
+    <lastmod>2018-04-04T12:00:00-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://darwinleung.github.io/categories/data-science/</loc>
     <lastmod>2018-03-30T12:37:00-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://darwinleung.github.io/tags/database/</loc>
+    <lastmod>2018-04-04T12:00:00-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -91,20 +123,32 @@
   </url>
   
   <url>
+    <loc>https://darwinleung.github.io/tags/mysql/</loc>
+    <lastmod>2018-04-04T12:00:00-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://darwinleung.github.io/posts/</loc>
-    <lastmod>2018-03-30T12:37:00-04:00</lastmod>
+    <lastmod>2018-04-04T12:00:00-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://darwinleung.github.io/categories/programming/</loc>
-    <lastmod>2018-03-30T12:37:00-04:00</lastmod>
+    <lastmod>2018-04-04T12:00:00-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://darwinleung.github.io/tags/python/</loc>
     <lastmod>2018-03-30T12:37:00-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://darwinleung.github.io/tags/sql/</loc>
+    <lastmod>2018-04-04T12:00:00-04:00</lastmod>
     <priority>0</priority>
   </url>
   

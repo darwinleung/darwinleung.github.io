@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en-us" class="wf-firasans-n4-active wf-active">
+	<head>
+    <link href="http://gmpg.org/xfn/11" rel="profile">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Enable responsiveness on mobile devices --> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    
+    	
+    <meta name="generator" content="Hugo 0.36.1" />
+    
+    <title>SQL optimization with indexing - part 1 &middot; DL</title>
+    <meta content="SQL optimization with indexing - part 1 - DL" property="og:title">
+    <meta content=" - " property="og:description">    
+    <!-- CSS --> 
+    <link rel="stylesheet" href="https://darwinleung.github.io/css/print.css" media="print">
+    <link rel="stylesheet" href="https://darwinleung.github.io/css/poole.css">
+    <link rel="stylesheet" href="https://darwinleung.github.io/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,500">
+    
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+    <!-- highlight.js--> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dark.min.css">
+    <!-- Customised CSS -->
+    <link rel="stylesheet" href="https://darwinleung.github.io/css/custom.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    
+
+	</head>
+    <body class="theme-base-0g " >
+        <div class="sidebar">
+	<div class="container text-center sidebar-sticky">
+		<div class="sidebar-about text-center">
+			<a href="https://darwinleung.github.io/"><h1 class="brand">DL</h1></a>
+			 <img src="/img/DL_symbol.jpg" alt="Author Image" class="img-circle headshot center"> 
+			<p class="lead">
+				 Darwin&#39;s personal blog 
+			</p>
+		</div>
+		
+<div>
+	<ul class="sidebar-nav">
+		
+		
+				<li>
+					<a href="/posts/"> <span>Posts</span></a>
+				</li>
+				<li>
+					<a href="/about/"> <span>About</span></a>
+				</li>
+				<li>
+					<a href="/contact/"> <span>Contact</span></a>
+				</li>
+		</li>
+	</ul>
+</div>
+
+        <p>
+		<section class="row text-center">
+	
+	
+	
+	&nbsp;<a href="https://github.com/darwinleung"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	&nbsp;<a href="https://linkedin.com/in/darwinleung"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	&nbsp;<a href="mailto:darwinlkh@gmail.com"><i class="fas fa-at fa-lg" aria-hidden="true"></i></a>
+	
+</section>
+
+        </p>
+		<p class="copyright">Built with Hugo and Hyde-hyde ©2018.
+        </p>
+	</div>
+	<div>
+	</div>
+</div>
+
+        <div class="content container">
+            <div class="post">
+  <h1>SQL optimization with indexing - part 1</h1>
+  
+  <div class="col-sm-12 col-md-12">
+    <span class="text-left post-date meta">
+            
+       
+        <i class="fas fa-calendar-alt"></i> Apr 2, 2018
+      
+      
+        
+        
+            in
+            
+            
+                <a class="meta" href="/categories/data-engineering">DATA ENGINEERING</a>
+                ,
+            
+                <a class="meta" href="/categories/programming">PROGRAMMING</a>
+                
+            
+        
+      
+      
+      
+        
+        
+            <br/>
+             <i class="fas fa-tags"></i>
+            
+            <a class="meta" href="/tags/database">database</a> 
+        
+            <a class="meta" href="/tags/mysql">mysql</a> 
+        
+            <a class="meta" href="/tags/sql">sql</a>
+        
+      
+      
+      </span>  
+  </div>    
+  
+  
+
+<p>Knowing how to write a query is not enough, when our tables grow larger it is common to run into query performance issues. If we know in advance how we are querying the table, one very handful technique to &ldquo;magically&rdquo; speed up the query is to add appropriate indexes in tables.</p>
+
+<h2 id="what-is-index"><strong>What is index?</strong></h2>
+
+<p>From MySQL <a href="https://dev.mysql.com/doc/refman/5.7/en/mysql-indexes.html">documentation</a>:</p>
+
+<blockquote>
+<p>Indexes are used to find rows with specific column values quickly. Without an index, MySQL must begin with the first row and then read through the entire table to find the relevant rows. The larger the table, the more this costs. If the table has an index for the columns in question, MySQL can quickly determine the position to seek to in the middle of the data file without having to look at all the data. This is much faster than reading every row sequentially.</p>
+</blockquote>
+
+<p>I think of index on a SQL table similar to the index on the side of a dictionary (yes, a physical book). By creating an index on column(s), we are mapping the column(s) to an new data structure (usually a tree structure/ hash table) holding the column value and a pointer to the original record. The index structure is then sorted logically, enabling fast lookup so we can look at the index and point directly to the corresponding rows without scanning through each rows one by one (aka <a href="https://dev.mysql.com/doc/refman/5.5/en/glossary.html#glos_full_table_scan">full table scan</a>).</p>
+
+<h2 id="how-to-create-index"><strong>How to create index?</strong></h2>
+
+<p>There are 2 ways to create a single column index, one is to run a <a href="https://dev.mysql.com/doc/refman/5.7/en/create-index.html"><code>CREATE INDEX</code> statement</a>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-mysql" data-lang="mysql"><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">INDEX</span> [<span style="color:#66d9ef">index</span> name] <span style="color:#66d9ef">ON</span> [<span style="color:#66d9ef">table</span> name] ( [<span style="color:#66d9ef">column</span> name] )</code></pre></div>
+<p>The other way that does the exact same is an <code>ALTER TABLE</code> statement:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-mysql" data-lang="mysql"><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> [<span style="color:#66d9ef">table</span> name] <span style="color:#66d9ef">ADD</span> <span style="color:#66d9ef">INDEX</span> [<span style="color:#66d9ef">index</span> name] ( [<span style="color:#66d9ef">column</span> name])</code></pre></div>
+<p>They are mapped to the exact same implementation on the server-side, <code>ALTER TABEL</code> is a more general command that provide more functionality than <code>CREATE INDEX</code>.</p>
+
+<h2 id="toy-example"><strong>Toy example</strong></h2>
+
+<p>We have a huge table containing the first name, last name, and phone number, this is the first 4 rows in the table:</p>
+
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>first_name</th>
+<th>last_name</th>
+<th>phone</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>1</td>
+<td>James</td>
+<td>Charles</td>
+<td>9999999999</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>David</td>
+<td>Smith</td>
+<td>8888888888</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>Amy</td>
+<td>Lee</td>
+<td>7777777777</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>James</td>
+<td>Charles</td>
+<td>9999999998</td>
+</tr>
+</tbody>
+</table>
+
+<p>A common task would be looking up the phone number for a specific user first name, we run a query like this to phone number from everyone with the first name &ldquo;David&rdquo;</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-mysql" data-lang="mysql"><span style="color:#66d9ef">SELECT</span> first_name, phone <span style="color:#66d9ef">FROM</span> tbl <span style="color:#66d9ef">WHERE</span> first_name <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;David&#39;</span></code></pre></div>
+<p>If the table is not indexed, mySQL would scan from the beginning to the end of the first_name column to find all matches with &lsquo;David&rsquo;. If the table is huge, it will take a long time. To speed this up, we can create an index on the column <code>first_name</code> by</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-mysql" data-lang="mysql"><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">INDEX</span> by_first_name <span style="color:#66d9ef">ON</span> <span style="color:#a6e22e">students</span> (<span style="color:#f92672">`</span>first_name<span style="color:#f92672">`</span>);</code></pre></div>
+<p>This statement basically create a small &ldquo;table&rdquo; looks like: <em>(This is not exactly how it works under the hood but this is a simplified version that help with my understanding. For more, read the next section)</em></p>
+
+<table>
+<thead>
+<tr>
+<th>value</th>
+<th>pointer</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Amy</td>
+<td>3</td>
+</tr>
+
+<tr>
+<td>Billy</td>
+<td>23</td>
+</tr>
+
+<tr>
+<td>&hellip;</td>
+<td>&hellip;</td>
+</tr>
+
+<tr>
+<td>David</td>
+<td>2</td>
+</tr>
+
+<tr>
+<td>David</td>
+<td>200</td>
+</tr>
+
+<tr>
+<td>Esther</td>
+<td>15</td>
+</tr>
+</tbody>
+</table>
+
+<p>Since the value is sorted logically (in this case aphetically or if the column data type is datetime then it will be sorted chronically and so on), every time we query on the first_name column, the search is speeded up by optimized search algorithm (e.g. binary search) and quickly locate all the rows satisfying the condition in the base table.</p>
+
+<p>Other than filtering rows satisfying the <code>SELECT</code> statement with <code>WHERE</code> condition, we can also leverage the power of indexing in other operations like <code>JOIN</code>, <code>ORDER BY</code>, <code>GROUP BY</code>, <code>MAX()</code>, <code>MIN()</code> given the query satisfy certain requirements. Read more: <a href="https://dev.mysql.com/doc/refman/5.5/en/mysql-indexes.html">https://dev.mysql.com/doc/refman/5.5/en/mysql-indexes.html</a></p>
+
+<h2 id="what-is-the-disadvantage-of-using-index"><strong>What is the disadvantage of using index?</strong></h2>
+
+<ol>
+<li><p>Disk space
+By creating index, we are basically duplicating part of the data (column value) on the disk and hence additional disk space is needed. By having many indexes that are not utilized, we are just wasting space.</p></li>
+
+<li><p><code>UPDATE</code> , <code>INSERT</code> ,<code>DELETE</code></p></li>
+</ol>
+
+<p>When we update, add or remove records in the table, the same operation has to be performed on on index as well. That means the more indexes you have, the more it will take to perform these operations.</p>
+
+<ol>
+<li>Adding an index to a table locks the table for reads and writes. Adding one for a large table takes time (in hours), so plan ahead when adding index in production.</li>
+</ol>
+
+<p>To conclude, if we know in advance how we are going to query the table frequently, it is incredibly beneficial to add indexes.</p>
+
+<p>The more you learn about how a RMDB works, the more you are amazed by how much thoughts and work is put into optimizing all kinds of operations. Imagine the time you saved by using a free and open source db if you need to build you own data storage solution starting from basic data structures.</p>
+
+</div>
+            <div class="footer">
+                <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+<script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+</script>
+
+
+
+            </div>
+        </div>
+        
+                
+    </body>
+</html>

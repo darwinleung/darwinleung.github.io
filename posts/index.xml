@@ -6,10 +6,52 @@
     <description>Recent content in Posts on DL</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 30 Mar 2018 12:37:00 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 04 Apr 2018 12:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://darwinleung.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>SQL optimization with indexing - part 3 - multi-column index</title>
+      <link>https://darwinleung.github.io/posts/2018-04-04-sql-optimization-with-indexing-part-2/</link>
+      <pubDate>Wed, 04 Apr 2018 12:00:00 -0400</pubDate>
+      
+      <guid>https://darwinleung.github.io/posts/2018-04-04-sql-optimization-with-indexing-part-2/</guid>
+      <description>MySQL can only use one index for each SELECT statement, it is very common to perform operations on multiple columns like:
+SELECT gaAppIds, dimension_date, dimension_country, dimension_source, dimension_medium, SUM(metric_sessions) FROM country_analytics GROUP BY gaAppIds , dimension_date , dimension_source , dimension_medium , dimension_country; By using a single-column index, we cannot take the full advantage for this query. We can add index for multiple columns (up to 16 columns). In the example above, we can add the following index with the 5 columns in the GROUP BY :</description>
+    </item>
+    
+    <item>
+      <title>SQL optimization with indexing - part 2 - index types in MySQL</title>
+      <link>https://darwinleung.github.io/posts/2018-04-03-sql-optimization-with-indexing-part-2/</link>
+      <pubDate>Tue, 03 Apr 2018 12:00:00 -0400</pubDate>
+      
+      <guid>https://darwinleung.github.io/posts/2018-04-03-sql-optimization-with-indexing-part-2/</guid>
+      <description>There are 2 main data structures for index in MySQL, they are B-tree and hash table. They are also the main index structures for other RMDBS.
+B-tree B-tree is a self-balancing sorted data structure similar to a binary search tree. The only difference is that a node in B-tree can have more than 2 children. For me, it looks like a binary tree with a range of numbers in each node (vs only 1 number in a node).</description>
+    </item>
+    
+    <item>
+      <title>SQL optimization with indexing - part 1</title>
+      <link>https://darwinleung.github.io/posts/2018-04-02-sql-optimization-with-indexing-part-1/</link>
+      <pubDate>Mon, 02 Apr 2018 12:00:00 -0400</pubDate>
+      
+      <guid>https://darwinleung.github.io/posts/2018-04-02-sql-optimization-with-indexing-part-1/</guid>
+      <description>Knowing how to write a query is not enough, when our tables grow larger it is common to run into query performance issues. If we know in advance how we are querying the table, one very handful technique to &amp;ldquo;magically&amp;rdquo; speed up the query is to add appropriate indexes in tables.
+What is index? From MySQL documentation:
+ Indexes are used to find rows with specific column values quickly. Without an index, MySQL must begin with the first row and then read through the entire table to find the relevant rows.</description>
+    </item>
+    
+    <item>
+      <title>Handy SQL Queries</title>
+      <link>https://darwinleung.github.io/posts/2018-04-01-handy-sql-queries/</link>
+      <pubDate>Sun, 01 Apr 2018 12:00:00 -0400</pubDate>
+      
+      <guid>https://darwinleung.github.io/posts/2018-04-01-handy-sql-queries/</guid>
+      <description>This is a list of handy SQL queries I use, I will keep it updated occasionally.
+Getting table sizes in MySQL This query lists the size of every table in every database in an MySQL instance, size sorted desc in MB:
+SELECT table_schema as `Database`, table_name AS `Table`, round(((data_length + index_length) / 1024 / 1024), 2) `Size in MB` FROM information_schema.TABLES ORDER BY (data_length + index_length) DESC;	 ref: SO</description>
+    </item>
     
     <item>
       <title>Running python 2 and 3 using conda</title>

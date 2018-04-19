@@ -10,8 +10,8 @@
     	
     <meta name="generator" content="Hugo 0.36.1" />
     
-    <title>Running python 2 and 3 using conda &middot; DL</title>
-    <meta content="Running python 2 and 3 using conda - DL" property="og:title">
+    <title>Hyde &middot; DL</title>
+    <meta content="Hyde - DL" property="og:title">
     <meta content=" - " property="og:description">    
     <!-- CSS --> 
     <link rel="stylesheet" href="https://darwinleung.github.io/css/print.css" media="print">
@@ -35,7 +35,9 @@
     <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    
+    <!-- RSS --> 
+    <link href="https://darwinleung.github.io/tags/hyde/index.xml" rel="alternate" type="application/rss+xml" title="DL" />
+    <link href="https://darwinleung.github.io/tags/hyde/index.xml" rel="feed" type="application/rss+xml" title="DL" />
 
 	</head>
     <body class="theme-base-0g " >
@@ -95,84 +97,20 @@
 </div>
 
         <div class="content container">
-            <div class="post">
-  <h1>Running python 2 and 3 using conda</h1>
-  
-  <div class="col-sm-12 col-md-12">
-    <span class="text-left post-date meta">
+            <h1 class="title">Hyde</h1>
+<ul class="posts">
+    <li>
+        <span>
+            <a href="https://darwinleung.github.io/posts/2018-03-25-setting-up-this-blog/">Setting up this blog with Hugo and Hyde-hyde</a>
             
-       
-        <i class="fas fa-calendar-alt"></i> Mar 30, 2018
-      
-      
-        
-        
-            in
+            <time class="pull-right post-list">Mar 25, 2018</time>    
             
-            
-                <a class="meta" href="/categories/data-science">DATA SCIENCE</a>
-                ,
-            
-                <a class="meta" href="/categories/programming">PROGRAMMING</a>
-                
-            
-        
-      
-      
-      
-        
-        
-            <br/>
-             <i class="fas fa-tags"></i>
-            
-            <a class="meta" href="/tags/conda">conda</a> 
-        
-            <a class="meta" href="/tags/mongodb">mongodb</a> 
-        
-            <a class="meta" href="/tags/python">python</a>
-        
-      
-      
-      </span>  
-  </div>    
-  
-  
+        </span>
+    </li>
+</ul>
 
-<p>I am taking the <a href="https://university.mongodb.com/courses/M101P/about">M101P</a> course to brush up my Mongo skill, the course is kind of dated, it uses Python 2. However, I use Python 3 on my machine by default. I need a quick and easy way to run python 2 scripts without changing my default settings/path. I found conda offer a great out-of-box solution by using <a href="https://conda.io/docs/user-guide/concepts.html">environment</a>.</p>
-
-<blockquote>
-<p>A conda environment is a directory that contains a specific collection of conda packages that you have installed. For example, you may have one environment with NumPy 1.7 and its dependencies, and another environment with NumPy 1.6 for legacy testing. If you change one environment, your other environments are not affected. You can easily activate or deactivate environments, which is how you switch between them. You can also share your environment with someone by giving them a copy of your <code>environment.yaml</code> file.</p>
-</blockquote>
-
-<p>It is perfect for my use case, I can simply create an env for python 2.7 and only use it within the course.</p>
-
-<h2 id="steps"><strong>Steps</strong></h2>
-
-<ol>
-<li>To create a new env for python 2.7 (<a href="https://conda.io/docs/user-guide/tasks/manage-python.html">ref</a>):<br />
-<code>conda create -n py27 python=2.7 anaconda</code><br />
-I got an error saying I already have an env created with the same prefix (py27), nice! it was created by default when I installed Python using Anaconda.</li>
-<li>To get a list of env (<a href="https://conda.io/docs/user-guide/tasks/manage-environments.html#viewing-a-list-of-your-environments">ref</a>), the one you are currently using is highlighted with an * :<br />
-<code>conda info --envs</code></li>
-<li>Next, to activate the py27 env:<br />
-<code>activate py27</code></li>
-<li>Notice the (py27) appear in the beginning of the command prompt, meaning I am currently in the environment, to verify python version:<br />
-<code>python -v</code></li>
-<li>To deactivate an environment:<br />
-<code>deactivate</code>
-If we list the env again, we are back to root.</li>
-</ol>
-
-</div>
             <div class="footer">
-                <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-
-<script type="text/javascript">
-    hljs.initHighlightingOnLoad();
-</script>
-
-
-
+                
             </div>
         </div>
         

@@ -10,8 +10,8 @@
     	
     <meta name="generator" content="Hugo 0.36.1" />
     
-    <title>Setting up this blog &middot; DL</title>
-    <meta content="Setting up this blog - DL" property="og:title">
+    <title>Setting up this blog with Hugo and Hyde-hyde &middot; DL</title>
+    <meta content="Setting up this blog with Hugo and Hyde-hyde - DL" property="og:title">
     <meta content=" - " property="og:description">    
     <!-- CSS --> 
     <link rel="stylesheet" href="https://darwinleung.github.io/css/print.css" media="print">
@@ -21,7 +21,7 @@
     
     <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
     <!-- highlight.js--> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dark.min.css">
     <!-- Customised CSS -->
     <link rel="stylesheet" href="https://darwinleung.github.io/css/custom.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -87,7 +87,7 @@
 </section>
 
         </p>
-		<p class="copyright">Built with Hugo and Hyde ©2018.
+		<p class="copyright">Built with Hugo and Hyde-hyde ©2018.
         </p>
 	</div>
 	<div>
@@ -96,7 +96,7 @@
 
         <div class="content container">
             <div class="post">
-  <h1>Setting up this blog</h1>
+  <h1>Setting up this blog with Hugo and Hyde-hyde</h1>
   
   <div class="col-sm-12 col-md-12">
     <span class="text-left post-date meta">
@@ -124,7 +124,11 @@
             
             <a class="meta" href="/tags/git">git</a> 
         
-            <a class="meta" href="/tags/hugo">hugo</a>
+            <a class="meta" href="/tags/hugo">hugo</a> 
+        
+            <a class="meta" href="/tags/hyde">hyde</a> 
+        
+            <a class="meta" href="/tags/hyde-hyde">hyde-hyde</a>
         
       
       
@@ -217,17 +221,21 @@ Note:  <code>\static</code> should be empty. Originally I modify it from the the
 
 <h3 id="font"><strong>Font</strong></h3>
 
-<p>We can also change the font size and family from the same <code>hyde.css</code>.</p>
+<p>We can also change the font size and family from <code>custom.css</code>.</p>
 
-<p>From Global resets, I modify the font-family to:</p>
+<p>I modified the font-family and font-size to:</p>
 
-<pre><code class="language-css">html {
-  font-family: Arial, Helvetica, sans-serif;
-    font-weight:300;
+<pre><code class="language-css">html,
+body
+{
+    font-family: &quot;Century Gothic&quot;, CenturyGothic, AppleGothic, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
 }
 </code></pre>
 
-<p>I am happy with the font size for hyde-hyde, but you can change the font size by changing the font-size parameters.</p>
+<p>I used <a href="https://www.cssfontstack.com">cssfontstack.com</a> to find a collection of web safe CSS font.</p>
 
 <h3 id="favicon"><strong>Favicon</strong></h3>
 
@@ -254,10 +262,12 @@ Note:  <code>\static</code> should be empty. Originally I modify it from the the
 <p>By theme default, the text is in white with black background color. There were some issues for code block, I <a href="https://stackoverflow.com/questions/38821339/hugo-pygments-how-to-change-highlighting-theme">fixed</a> it by adding these on the config.toml. A subset of list of Pygment style is available <a href="https://help.farbox.com/pygments.html">here</a>.</p>
 
 <pre><code class="language-toml">PygmentsCodeFences = true
-PygmentsStyle = &quot;native&quot;
+PygmentsStyle = &quot;monokai&quot;
 </code></pre>
 
-<h2 id="hosting-on-github"><strong>Hosting on Github</strong></h2>
+<p>Update (04-18-2018): I switched to another highlighting style from <code>config.toml</code> <code>[param]</code> by adding <code>highlightjsstyle = &quot;dark&quot;</code>.</p>
+
+<p>##<strong>Hosting on Github</strong></p>
 
 <p>Once everything look okay locally, the last step is to host it on Github pages. I follow the <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github">guide</a> from Hugo.</p>
 

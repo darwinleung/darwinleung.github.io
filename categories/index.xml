@@ -13,16 +13,25 @@
     <item>
       <title>Data Engineering</title>
       <link>https://darwinleung.github.io/categories/data-engineering/</link>
-      <pubDate>Wed, 04 Apr 2018 12:00:00 -0400</pubDate>
+      <pubDate>Tue, 10 Apr 2018 12:00:00 -0400</pubDate>
       
       <guid>https://darwinleung.github.io/categories/data-engineering/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>Data Processing</title>
+      <link>https://darwinleung.github.io/categories/data-processing/</link>
+      <pubDate>Sat, 12 May 2018 12:00:00 -0400</pubDate>
+      
+      <guid>https://darwinleung.github.io/categories/data-processing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Data Science</title>
       <link>https://darwinleung.github.io/categories/data-science/</link>
-      <pubDate>Fri, 30 Mar 2018 12:37:00 -0400</pubDate>
+      <pubDate>Sat, 12 May 2018 12:00:00 -0400</pubDate>
       
       <guid>https://darwinleung.github.io/categories/data-science/</guid>
       <description></description>
@@ -38,9 +47,18 @@
     </item>
     
     <item>
+      <title>Machine Learning</title>
+      <link>https://darwinleung.github.io/categories/machine-learning/</link>
+      <pubDate>Sat, 12 May 2018 12:00:00 -0400</pubDate>
+      
+      <guid>https://darwinleung.github.io/categories/machine-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Programming</title>
       <link>https://darwinleung.github.io/categories/programming/</link>
-      <pubDate>Wed, 04 Apr 2018 12:00:00 -0400</pubDate>
+      <pubDate>Tue, 10 Apr 2018 12:00:00 -0400</pubDate>
       
       <guid>https://darwinleung.github.io/categories/programming/</guid>
       <description></description>

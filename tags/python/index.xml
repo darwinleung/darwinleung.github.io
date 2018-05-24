@@ -6,10 +6,20 @@
     <description>Recent content in Python on DL</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 30 Mar 2018 12:37:00 -0400</lastBuildDate>
+    <lastBuildDate>Sat, 12 May 2018 12:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://darwinleung.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How does imputation work</title>
+      <link>https://darwinleung.github.io/posts/2018-05-12-imputation-sklearn/</link>
+      <pubDate>Sat, 12 May 2018 12:00:00 -0400</pubDate>
+      
+      <guid>https://darwinleung.github.io/posts/2018-05-12-imputation-sklearn/</guid>
+      <description>How does imputation work? Imputation is a pre-processing technique to handle missing data before fitting the data into model. One of the simplest implementation is to estimate the missing values using the mean/median or the most frequent value of the row/ column where the missing values are located. There are more advanced ways to impute data like regressions, multiple imputation etc.
+Imputer in sklearn The Imputer function in the sklearn library is commonly used in various tutorials.</description>
+    </item>
     
     <item>
       <title>Running python 2 and 3 using conda</title>

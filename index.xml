@@ -6,10 +6,33 @@
     <description>Recent content on DL</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 04 Apr 2018 12:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Sat, 12 May 2018 12:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://darwinleung.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How does imputation work</title>
+      <link>https://darwinleung.github.io/posts/2018-05-12-imputation-sklearn/</link>
+      <pubDate>Sat, 12 May 2018 12:00:00 -0400</pubDate>
+      
+      <guid>https://darwinleung.github.io/posts/2018-05-12-imputation-sklearn/</guid>
+      <description>How does imputation work? Imputation is a pre-processing technique to handle missing data before fitting the data into model. One of the simplest implementation is to estimate the missing values using the mean/median or the most frequent value of the row/ column where the missing values are located. There are more advanced ways to impute data like regressions, multiple imputation etc.
+Imputer in sklearn The Imputer function in the sklearn library is commonly used in various tutorials.</description>
+    </item>
+    
+    <item>
+      <title>MongoDB for Developer M101P notes</title>
+      <link>https://darwinleung.github.io/posts/2018-04-10-mongodb-notes/</link>
+      <pubDate>Tue, 10 Apr 2018 12:00:00 -0400</pubDate>
+      
+      <guid>https://darwinleung.github.io/posts/2018-04-10-mongodb-notes/</guid>
+      <description>insertMany(), default ordered: true, once it encounters as error, insert stop. If ordered set to false, it will insert the rest of documents despite any errors.
+ ObjectId: 12-Byte Hex string
+_ _ _ _ , _ _ _ , _ _ , _ _ _
+Date (time stamp), Mac addr, PID (process ID), Counter
+ Exact match on array field example: db.movieDetails.find({&amp;ldquo;writers&amp;rdquo;: [&amp;ldquo;A&amp;rdquo;, &amp;ldquo;B&amp;rdquo;]}).count(), ordering matters. To find a match within array: db.</description>
+    </item>
     
     <item>
       <title>SQL optimization with indexing - part 3 - multi-column index</title>

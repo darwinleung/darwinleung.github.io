@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en-us" class="wf-firasans-n4-active wf-active">
+	<head>
+    <link href="http://gmpg.org/xfn/11" rel="profile">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Enable responsiveness on mobile devices --> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    
+    	
+    <meta name="generator" content="Hugo 0.36.1" />
+    
+    <title>MongoDB for Developer M101P notes &middot; DL</title>
+    <meta content="MongoDB for Developer M101P notes - DL" property="og:title">
+    <meta content=" - " property="og:description">    
+    <!-- CSS --> 
+    <link rel="stylesheet" href="https://darwinleung.github.io/css/print.css" media="print">
+    <link rel="stylesheet" href="https://darwinleung.github.io/css/poole.css">
+    <link rel="stylesheet" href="https://darwinleung.github.io/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,500">
+    
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+    <!-- highlight.js--> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dark.min.css">
+    <!-- Customised CSS -->
+    <link rel="stylesheet" href="https://darwinleung.github.io/css/custom.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    
+
+	</head>
+    <body class="theme-base-0g " >
+        <div class="sidebar">
+	<div class="container text-center sidebar-sticky">
+		<div class="sidebar-about text-center">
+			<a href="https://darwinleung.github.io/"><h1 class="brand">DL</h1></a>
+			 <img src="/img/DL_symbol.jpg" alt="Author Image" class="img-circle headshot center"> 
+			<p class="lead">
+				 Darwin&#39;s personal blog 
+			</p>
+		</div>
+		
+<div>
+	<ul class="sidebar-nav">
+		
+		
+				<li>
+					<a href="/posts/"> <span>Posts</span></a>
+				</li>
+				<li>
+					<a href="/about/"> <span>About</span></a>
+				</li>
+				<li>
+					<a href="/contact/"> <span>Contact</span></a>
+				</li>
+		</li>
+	</ul>
+</div>
+
+        <p>
+		<section class="row text-center">
+	
+	
+	
+	&nbsp;<a href="https://github.com/darwinleung"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	&nbsp;<a href="https://linkedin.com/in/darwinleung"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	&nbsp;<a href="mailto:darwinlkh@gmail.com"><i class="fas fa-at fa-lg" aria-hidden="true"></i></a>
+	
+</section>
+
+        </p>
+		<p class="copyright">Built with Hugo and Hyde-hyde ©2018.
+        </p>
+	</div>
+	<div>
+	</div>
+</div>
+
+        <div class="content container">
+            <div class="post">
+  <h1>MongoDB for Developer M101P notes</h1>
+  
+  <div class="col-sm-12 col-md-12">
+    <span class="text-left post-date meta">
+            
+       
+        <i class="fas fa-calendar-alt"></i> Apr 10, 2018
+      
+      
+        
+        
+            in
+            
+            
+                <a class="meta" href="/categories/data-engineering">DATA ENGINEERING</a>
+                ,
+            
+                <a class="meta" href="/categories/programming">PROGRAMMING</a>
+                
+            
+        
+      
+      
+      
+        
+        
+            <br/>
+             <i class="fas fa-tags"></i>
+            
+            <a class="meta" href="/tags/database">database</a> 
+        
+            <a class="meta" href="/tags/mongodb">mongodb</a> 
+        
+            <a class="meta" href="/tags/pymongo">pymongo</a>
+        
+      
+      
+      </span>  
+  </div>    
+  
+  <ol>
+<li><p>insertMany(), default ordered: true, once it encounters as error, insert stop. If ordered set to false, it will insert the rest of documents despite any errors.</p></li>
+
+<li><p>ObjectId: 12-Byte Hex string<br />
+_ _ _ _ , _ _ _ , _ _ , _ _ _<br />
+Date (time stamp), Mac addr, PID (process ID), Counter</p></li>
+
+<li><p>Exact match on array field example: db.movieDetails.find({&ldquo;writers&rdquo;: [&ldquo;A&rdquo;, &ldquo;B&rdquo;]}).count(), ordering matters. To find a match within array: db.movieDetails.find({&ldquo;writers&rdquo;:&ldquo;A&rdquo; }), same with scalar value match. If order matters, db.movieDetails.find({&ldquo;writers.0&rdquo;:&ldquo;A&rdquo;}) return only the array start with &ldquo;A&rdquo;.</p></li>
+
+<li><p>Select field to return db.movieDetails.find({&ldquo;writers&rdquo;:&ldquo;A&rdquo;}, {title:1, _id:0}). By default, _id is returned.</p></li>
+
+<li><p>One reason to have an $and operation is to set multiple constraint to the same field.</p></li>
+
+<li><p>Use mongorestore to restore the dump into your running mongod. Do this by opening a terminal window (mac) or cmd window (windows) and navigating to the directory so that you are in the parent directory of the dump directory (if you used the default extraction method, it should be hw1/). Now type: <code>mongorestore dump</code>. Note you will need to have your path setup correctly to find mongorestore.</p></li>
+
+<li><p>Update, <code>$push</code>, <code>$each</code> to add the entire array as one field within an array, <code>$slice</code> keep first nth record, <code>$position</code> push to the front if 0.</p></li>
+
+<li><p>Upsert: update if exist, create if not exist<br />
+<img src="/img/mongo upsert.png" alt="mongo upsert" /></p></li>
+
+<li><p>On cursor: Sort first, then skip, then limit, sort example: <code>cursor.sort([(&quot;a&quot;: pymongo.ASCENDING)])</code></p></li>
+
+<li><p>Difference between Pymongo vs Mongo syntax, json preserves order, dictionary from Python doesn&rsquo;t preserve order. Multiple sorting condition on Pymongo use tuple.</p></li>
+
+<li><p>Insert_many, if no order flag specific, by default = True, so once there is an error, any future insert would not be executed.</p></li>
+
+<li><p>Replace_one, update_one and update_many all call the server&rsquo;s update command behind the scene.</p></li>
+
+<li><p>Update need to pass <code>$set</code> or <code>$unset</code> operator while Replace no need</p></li>
+
+<li><p>Update one only send the set/ unset info to the database while Replace send the entire document back. (Pymongo: Updating Data using Replace Chapter 2)</p></li>
+
+<li><p>find_one_and_delete/ _replace/ _update all use find_and_modify under the hood</p></li>
+
+<li><p>atomic operation: indivisible, unchangeable, whole and irreducible. Either return original state or complete state, never intermediate state. Must be performed entirely or not performed at all</p>
+
+<ul>
+<li>3 ways to replace transactions in RDB
+
+<ol>
+<li>restructure, all date is stored within single document</li>
+<li>implement in SW (api?)</li>
+<li>tolerate (some inconsistency)</li>
+</ol></li>
+</ul></li>
+
+<li><p>Goals of normalization:</p>
+
+<ol>
+<li>free the database of modification anomalies</li>
+<li>minimize redesign when extending</li>
+<li>avoid bias toward any particular access pattern</li>
+</ol></li>
+
+<li><p>Normalized tables in third normal form: every non-key attribute in the table must provide a fact about the whole key and nothing but the key. (courtroom: telling the truth, the whole truth, nothing but the truth.)</p></li>
+
+<li><p>One-to-many relations: True linking with 2 documents
+One-to-few relations: Store within 1 documents
+many-to-many relations: embed or store Id of the other document</p></li>
+
+<li><p>Default storage engine: MMAPv1</p>
+
+<ol>
+<li>Collection level locking (multiple reader/ single writer)</li>
+<li>In place updates</li>
+<li>Power of Two size (allocate 2^n space)</li>
+</ol></li>
+
+<li><p>WeirdTiger storage engine<br />
+ <code>mongod --storageEngine wiredTiger</code></p>
+
+<ol>
+<li>Document level concurency</li>
+<li>Compression of data/ indexes</li>
+</ol></li>
+
+<li><p>To check index, use explain(), in the &ldquo;winningPlan&rdquo;, if stage = &ldquo;COLLSCAN&rdquo; = collection scan, if using index, stage = &ldquo;FETCH&rdquo; with &ldquo;indexName&rdquo;. Find how many documents it scan from &ldquo;executionStats&rdquo;: &ldquo;docExamined&rdquo;</p></li>
+
+<li><p>Multikey Indexes: can add indexes on array, can create compound indexes that includes array. If you have an index that is multikey and at least one document with a value of array, you cant have multiple values of index both be array.</p></li>
+
+<li><p>Sparse index cannot be used for sorting if using it would omit any document in final result</p></li>
+
+<li><p>Foreground index creation by default, it is faster but read and write would be block on db level. Background is slower but not blocked.</p></li>
+
+<li><p>Covered query: nRetured &gt; 0, totalKeysExamined &gt; 0, totalDocsExamined = 0</p></li>
+
+<li><p>Text index search = OR, e.x. <code>db.movies.find({$text: {$search: &quot;dog cat&quot;}})</code> return all documents with &ldquo;dog&rdquo; or &ldquo;cat&rdquo;.</p></li>
+
+<li><p>query to look in the system profile collection for all queries that took longer than one second, ordered by timestamp descending. <code>db.system.profile.find({millis:{$gt:1}}).sort({ts:1})</code></p></li>
+
+<li><p>Mongotop ~ unix top, mongostat ~ iostat</p></li>
+
+<li><p>Stages of aggregation pipeline:</p>
+
+<ul>
+<li>$project - reshape - 1:1</li>
+<li>$match - filter - n:1</li>
+<li>$group - aggregate - n:1</li>
+<li>$sort - sort - 1:1</li>
+<li>$skip - skips - n:1</li>
+<li>$limit - limits - n:1</li>
+<li>$unwind -normalize - 1:n</li>
+<li>$out -output - 1:1</li>
+</ul></li>
+
+<li><p>$addtoset VS $push: addtoset results is a set which is distinct, push result is a list which there are duplicated</p></li>
+
+<li><p>$out: similar with <code>select into new table</code> , will overwrite existing collection, careful with duplicate key error</p></li>
+
+<li><p>aggregation option, use following array aggregate([stage1,stage2,stage3],{option:1})</p>
+
+<ul>
+<li>explain - query plan</li>
+<li>allowDiskUse - 100MB in memory limit, if exceed, use this</li>
+</ul></li>
+
+<li><p>Pymongo by default return one big document from aggregation result, Mongo Shell by default returns a cursor. To return cursor on Pymongo, add cursor=true after the aggregation array.</p></li>
+
+<li><p>Tips on aggregation framework: modular -&gt; add one step at a time, for debugging and confirming you are working towards the expected result</p></li>
+
+<li><p>W is value to represent whether we are going to wait for the write to be acknowledged by the server is W, by default W = 1, J stands for journal, represent whether we wait for jornal to be written to disk before we continue, by default, J = 0. Journal to the disk is where data become persistent on disk.
+Write concern:</p>
+
+<ul>
+<li>W = 1, J = 0: fast, small window of vulnerability</li>
+<li>W = 1, J = 1: slow, no vulnerability<br /></li>
+<li>W = 0: not recommended</li>
+</ul></li>
+
+<li><p>Network errors, change update into insert</p></li>
+
+<li><p>Types of replica set nodes:</p>
+
+<ol>
+<li>Regular</li>
+<li>Arbiter for voting</li>
+<li>delayed (Priority = 0)</li>
+<li>Hidden (not primary, priority = 0)</li>
+</ol></li>
+
+<li><p>rs.status() to see the config of a replica set, rs.slaveOK() to enable read in a slave node. &ldquo;Optime&rdquo; is the time data is up to date until</p></li>
+
+<li><p>db.local.oplog.rs.find() to read oplog in the node. Capped collection, will be roll off so adjust the size according to uses</p></li>
+
+<li><p>To write robustly, need to catch AutoReconnect error, wait exponentially, and retry, catch duplicated key error as well.</p></li>
+
+<li><p>To read robustly, need to catch AutoReconnect error only as duplicated key error is not applicable to read operations</p></li>
+
+<li><p>To update robustly, it is possible to run the update twice using autoReconnect exception. One solution is to turn non-idempotent updates (e.x. \$push/ \$inc) into idempotent updates (e.x. $set). Idempotent means you can do the same operation multiple times with the same result.</p></li>
+
+<li><p>Setting write concern (w/ j/ wtimeout) can be done in 3 places: 1. connection, 2. collection, 3. replica set</p></li>
+
+<li><p>Read preference in a replica set: Primary/ PrimaryPreferred/ Secondary/ SecondaryPreferred/ Nearest</p></li>
+
+<li><p>MongoS is the router for sharding, no longer need to connect to mongoD</p></li>
+
+<li><p>2 ways to do sharding: range-based (e.g. id = 1-100 in shard1, 101-200 in shard2) and hashed based</p></li>
+
+<li><p>sh.status() gives status of a sharded system.</p></li>
+
+<li><p>Implication of sharding:</p>
+
+<ul>
+<li>every doc includes the shard key</li>
+<li>shard key is immutable</li>
+<li>index that starts with the shard key</li>
+<li>No shard key means scatter gather (expensive)</li>
+<li>no unique key unless its part of shard key</li>
+<li>multi-key as shard key is illegal</li>
+</ul></li>
+
+<li><p>Inserting doesn&rsquo;t use index, removing index can speed up inserting.</p>
+
+<p>​</p></li>
+</ol>
+
+</div>
+            <div class="footer">
+                <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+<script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+</script>
+
+
+
+            </div>
+        </div>
+        
+                
+    </body>
+</html>

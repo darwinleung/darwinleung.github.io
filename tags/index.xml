@@ -23,7 +23,7 @@
     <item>
       <title>Database</title>
       <link>https://darwinleung.github.io/tags/database/</link>
-      <pubDate>Wed, 04 Apr 2018 12:00:00 -0400</pubDate>
+      <pubDate>Tue, 10 Apr 2018 12:00:00 -0400</pubDate>
       
       <guid>https://darwinleung.github.io/tags/database/</guid>
       <description></description>
@@ -75,9 +75,18 @@
     </item>
     
     <item>
+      <title>Imputation</title>
+      <link>https://darwinleung.github.io/tags/imputation/</link>
+      <pubDate>Sat, 12 May 2018 12:00:00 -0400</pubDate>
+      
+      <guid>https://darwinleung.github.io/tags/imputation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Mongodb</title>
       <link>https://darwinleung.github.io/tags/mongodb/</link>
-      <pubDate>Fri, 30 Mar 2018 12:37:00 -0400</pubDate>
+      <pubDate>Tue, 10 Apr 2018 12:00:00 -0400</pubDate>
       
       <guid>https://darwinleung.github.io/tags/mongodb/</guid>
       <description></description>
@@ -93,11 +102,29 @@
     </item>
     
     <item>
+      <title>Pymongo</title>
+      <link>https://darwinleung.github.io/tags/pymongo/</link>
+      <pubDate>Tue, 10 Apr 2018 12:00:00 -0400</pubDate>
+      
+      <guid>https://darwinleung.github.io/tags/pymongo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Python</title>
       <link>https://darwinleung.github.io/tags/python/</link>
-      <pubDate>Fri, 30 Mar 2018 12:37:00 -0400</pubDate>
+      <pubDate>Sat, 12 May 2018 12:00:00 -0400</pubDate>
       
       <guid>https://darwinleung.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sklearn</title>
+      <link>https://darwinleung.github.io/tags/sklearn/</link>
+      <pubDate>Sat, 12 May 2018 12:00:00 -0400</pubDate>
+      
+      <guid>https://darwinleung.github.io/tags/sklearn/</guid>
       <description></description>
     </item>
     

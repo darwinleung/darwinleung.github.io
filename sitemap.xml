@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://darwinleung.github.io/posts/2018-05-12-imputation-sklearn/</loc>
+    <lastmod>2018-05-12T12:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://darwinleung.github.io/posts/2018-04-10-mongodb-notes/</loc>
+    <lastmod>2018-04-10T12:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://darwinleung.github.io/posts/2018-04-04-sql-optimization-with-indexing-part-2/</loc>
     <lastmod>2018-04-04T12:00:00-04:00</lastmod>
   </url>
@@ -58,25 +68,31 @@
   
   <url>
     <loc>https://darwinleung.github.io/</loc>
-    <lastmod>2018-04-04T12:00:00-04:00</lastmod>
+    <lastmod>2018-05-12T12:00:00-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://darwinleung.github.io/categories/data-engineering/</loc>
-    <lastmod>2018-04-04T12:00:00-04:00</lastmod>
+    <lastmod>2018-04-10T12:00:00-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://darwinleung.github.io/categories/data-processing/</loc>
+    <lastmod>2018-05-12T12:00:00-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://darwinleung.github.io/categories/data-science/</loc>
-    <lastmod>2018-03-30T12:37:00-04:00</lastmod>
+    <lastmod>2018-05-12T12:00:00-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://darwinleung.github.io/tags/database/</loc>
-    <lastmod>2018-04-04T12:00:00-04:00</lastmod>
+    <lastmod>2018-04-10T12:00:00-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -117,8 +133,20 @@
   </url>
   
   <url>
+    <loc>https://darwinleung.github.io/tags/imputation/</loc>
+    <lastmod>2018-05-12T12:00:00-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://darwinleung.github.io/categories/machine-learning/</loc>
+    <lastmod>2018-05-12T12:00:00-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://darwinleung.github.io/tags/mongodb/</loc>
-    <lastmod>2018-03-30T12:37:00-04:00</lastmod>
+    <lastmod>2018-04-10T12:00:00-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -130,19 +158,31 @@
   
   <url>
     <loc>https://darwinleung.github.io/posts/</loc>
-    <lastmod>2018-04-04T12:00:00-04:00</lastmod>
+    <lastmod>2018-05-12T12:00:00-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://darwinleung.github.io/categories/programming/</loc>
-    <lastmod>2018-04-04T12:00:00-04:00</lastmod>
+    <lastmod>2018-04-10T12:00:00-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://darwinleung.github.io/tags/pymongo/</loc>
+    <lastmod>2018-04-10T12:00:00-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://darwinleung.github.io/tags/python/</loc>
-    <lastmod>2018-03-30T12:37:00-04:00</lastmod>
+    <lastmod>2018-05-12T12:00:00-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://darwinleung.github.io/tags/sklearn/</loc>
+    <lastmod>2018-05-12T12:00:00-04:00</lastmod>
     <priority>0</priority>
   </url>
   

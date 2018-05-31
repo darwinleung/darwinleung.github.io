@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>https://darwinleung.github.io/posts/2018-04-18-writing-math-in-hugo/</loc>
+    <lastmod>2018-04-18T12:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://darwinleung.github.io/posts/2018-04-10-mongodb-notes/</loc>
     <lastmod>2018-04-10T12:00:00-04:00</lastmod>
   </url>
@@ -98,7 +103,7 @@
   
   <url>
     <loc>https://darwinleung.github.io/categories/fun/</loc>
-    <lastmod>2018-03-26T22:40:00-04:00</lastmod>
+    <lastmod>2018-04-18T12:00:00-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -116,7 +121,7 @@
   
   <url>
     <loc>https://darwinleung.github.io/tags/hugo/</loc>
-    <lastmod>2018-03-25T14:47:00-04:00</lastmod>
+    <lastmod>2018-04-18T12:00:00-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -128,7 +133,7 @@
   
   <url>
     <loc>https://darwinleung.github.io/tags/hyde-hyde/</loc>
-    <lastmod>2018-03-25T14:47:00-04:00</lastmod>
+    <lastmod>2018-04-18T12:00:00-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -141,6 +146,12 @@
   <url>
     <loc>https://darwinleung.github.io/categories/machine-learning/</loc>
     <lastmod>2018-05-12T12:00:00-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://darwinleung.github.io/tags/mathjax/</loc>
+    <lastmod>2018-04-18T12:00:00-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -164,7 +175,7 @@
   
   <url>
     <loc>https://darwinleung.github.io/categories/programming/</loc>
-    <lastmod>2018-04-10T12:00:00-04:00</lastmod>
+    <lastmod>2018-04-18T12:00:00-04:00</lastmod>
     <priority>0</priority>
   </url>
   

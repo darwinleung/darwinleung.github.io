@@ -6,10 +6,19 @@
     <description>Recent content in Fun on DL</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 26 Mar 2018 22:40:00 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 18 Apr 2018 12:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://darwinleung.github.io/categories/fun/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Writing Math in Hugo</title>
+      <link>https://darwinleung.github.io/posts/2018-04-18-writing-math-in-hugo/</link>
+      <pubDate>Wed, 18 Apr 2018 12:00:00 -0400</pubDate>
+      
+      <guid>https://darwinleung.github.io/posts/2018-04-18-writing-math-in-hugo/</guid>
+      <description>In this blog, I am going to write a lot of math. I used Typora as my markdown editor and it supports MathJax out of the box. I just need to wrap my math blocks with $$ (following this reference). However, I will need to do a quick step to make Hugo work with MathJax as discribed in the Hugo documentation. I copied add-mathjax-to-page.html and pasted in the beginning of post_footer.</description>
+    </item>
     
     <item>
       <title>Limbo</title>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en-us" class="wf-firasans-n4-active wf-active">
+	<head>
+    <link href="http://gmpg.org/xfn/11" rel="profile">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Enable responsiveness on mobile devices --> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    
+    	
+    <meta name="generator" content="Hugo 0.36.1" />
+    
+    <title>Writing Math in Hugo &middot; DL</title>
+    <meta content="Writing Math in Hugo - DL" property="og:title">
+    <meta content=" - " property="og:description">    
+    <!-- CSS --> 
+    <link rel="stylesheet" href="https://darwinleung.github.io/css/print.css" media="print">
+    <link rel="stylesheet" href="https://darwinleung.github.io/css/poole.css">
+    <link rel="stylesheet" href="https://darwinleung.github.io/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,500">
+    
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+    <!-- highlight.js--> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dark.min.css">
+    <!-- Customised CSS -->
+    <link rel="stylesheet" href="https://darwinleung.github.io/css/custom.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    
+
+	</head>
+    <body class="theme-base-0g " >
+        <div class="sidebar">
+	<div class="container text-center sidebar-sticky">
+		<div class="sidebar-about text-center">
+			<a href="https://darwinleung.github.io/"><h1 class="brand">DL</h1></a>
+			 <img src="/img/DL_symbol.jpg" alt="Author Image" class="img-circle headshot center"> 
+			<p class="lead">
+				 Darwin&#39;s personal blog 
+			</p>
+		</div>
+		
+<div>
+	<ul class="sidebar-nav">
+		
+		
+				<li>
+					<a href="/posts/"> <span>Posts</span></a>
+				</li>
+				<li>
+					<a href="/about/"> <span>About</span></a>
+				</li>
+				<li>
+					<a href="/contact/"> <span>Contact</span></a>
+				</li>
+		</li>
+	</ul>
+</div>
+
+        <p>
+		<section class="row text-center">
+	
+	
+	
+	&nbsp;<a href="https://github.com/darwinleung"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	&nbsp;<a href="https://linkedin.com/in/darwinleung"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	&nbsp;<a href="mailto:darwinlkh@gmail.com"><i class="fas fa-at fa-lg" aria-hidden="true"></i></a>
+	
+</section>
+
+        </p>
+		<p class="copyright">Built with Hugo and Hyde-hyde ©2018.
+        </p>
+	</div>
+	<div>
+	</div>
+</div>
+
+        <div class="content container">
+            <div class="post">
+  <h1>Writing Math in Hugo</h1>
+  
+  <div class="col-sm-12 col-md-12">
+    <span class="text-left post-date meta">
+            
+       
+        <i class="fas fa-calendar-alt"></i> Apr 18, 2018
+      
+      
+        
+        
+            in
+            
+            
+                <a class="meta" href="/categories/fun">FUN</a>
+                ,
+            
+                <a class="meta" href="/categories/programming">PROGRAMMING</a>
+                
+            
+        
+      
+      
+      
+        
+        
+            <br/>
+             <i class="fas fa-tags"></i>
+            
+            <a class="meta" href="/tags/hugo">hugo</a> 
+        
+            <a class="meta" href="/tags/hyde-hyde">hyde-hyde</a> 
+        
+            <a class="meta" href="/tags/mathjax">mathjax</a>
+        
+      
+      
+      </span>  
+  </div>    
+  
+  
+
+<p>In this blog, I am going to write a lot of math. I used Typora as my markdown editor and it supports MathJax out of the box. I just need to wrap my math blocks with $$ (following this <a href="https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference">reference)</a>. However, I will need to do a quick step to make Hugo work with MathJax as discribed in the Hugo <a href="https://gohugo.io/content-management/formats/#mathjax-with-hugo">documentation</a>. I copied <code>add-mathjax-to-page.html</code>  and pasted in the beginning of <code>post_footer.html</code> in the <code>layout/partials</code> folder.</p>
+
+<p>add-mathjax-to-page.html:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML&#34;</span>&gt;
+&lt;/<span style="color:#f92672">script</span>&gt;</code></pre></div>
+<p>There are some minor issues with how Hugo render MathJax, below are some tests and small modifications I need to make for each cases.</p>
+
+<h1 id="mathjax-test">Mathjax test</h1>
+
+<p>My solution to this <a href="https://puzzling.stackexchange.com/questions/1963/6-the-magic-number">puzzle</a>.
+$$
+( 1 + 1 + 1)! = 6\\<br />
+2 + 2 + 2 = 6\\<br />
+3 * 3 - 3 = 6\\<br />
+4! / 4 * 4^0 = 6\\<br />
+5 + (5 / 5) = 6\\<br />
+6 + 6 - 6 = 6\\<br />
+7 - (7 / 7) = 6\\<br />
+8 * 8^0 - 8^{\frac 13} = 6\\<br />
+{\sqrt 9} + {\sqrt 9} + {\sqrt 9} = 6\\<br />
+{\log (10 * 10 * 10)}! = 6
+$$
+As flagged in this <a href="https://github.com/gcushen/hugo-academic/issues/291">issue</a>, we need to use six backslashes for line break.</p>
+
+<p>How about summation and subscripts? (Cost function with regularization)</p>
+
+<p>$$
+J(\theta) =\frac{1}{2m}
+[\sum^m_{i=1}(h_\theta(x^{(i)}) -
+y^{(i)})^2] + \lambda\sum^n_{j=1}\theta^2_j
+$$
+The way Hugo handles italics is the same with subscript in MathJax, they both use underscore, to work around this, I just need to add an extra backslash before each underscore to escape them.</p>
+
+<p>Matrix operations?
+$$
+Av=\begin{bmatrix}
+c &amp; c &amp; c &amp; \cdots \\<br />
+o &amp; o &amp; o &amp; \cdots \\\
+l &amp; l &amp; l &amp; \cdots \\\
+u &amp; u &amp; u &amp; \cdots \\\
+m &amp; m &amp; m &amp; \cdots \\\
+n &amp; n &amp; n &amp; \cdots
+\end{bmatrix}
+\begin{bmatrix}
+a  \\\
+b \\\
+c \\\
+\vdots
+\end{bmatrix}
+= a* \begin{bmatrix}
+1^{st}  \\\
+c \\\
+o \\\
+l \\\
+u \\\
+m \\\
+n
+\end{bmatrix}
++b*  \begin{bmatrix}
+2^{nd}  \\\
+c \\\
+o \\\
+l \\\
+u \\\
+m \\\
+n
+\end{bmatrix} + \cdots
+$$
+Again, for each line break at the end of row, we need six backslashes. Original LaTex from <a href="https://blogs.ams.org/mathgradblog/2017/06/12/matrix-multiplication-human-way/">here</a>.</p>
+
+<p>How about some physics? (Maxwell&rsquo;s Equations)
+$$
+\begin{align}
+\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &amp; = \frac{4\pi}{c}\vec{\mathbf{j}} \\\   \nabla \cdot \vec{\mathbf{E}} &amp; = 4 \pi \rho \\<br />
+\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} &amp; = \vec{\mathbf{0}} \\<br />
+\nabla \cdot \vec{\mathbf{B}} &amp; = 0
+\end{align}
+$$
+Although it looks good here, it differs from standard MathJax and in my editor so I will need to spend a bit of time re-formatting the math. Luckily, the LiveLoad feature of Hugo is perfect for editing markdown and rebuild the site instantly to see how it looks on the site.</p>
+
+</div>
+            <div class="footer">
+                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+<script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+</script>
+
+
+
+            </div>
+        </div>
+        
+                
+    </body>
+</html>

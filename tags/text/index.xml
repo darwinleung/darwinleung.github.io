@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Text on DL</title>
+    <link>https://darwinleung.github.io/tags/text/</link>
+    <description>Recent content in Text on DL</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 09 May 2018 12:00:00 -0400</lastBuildDate>
+    
+	<atom:link href="https://darwinleung.github.io/tags/text/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Extracting features from text - BoW, tfidf</title>
+      <link>https://darwinleung.github.io/posts/2018-05-09-extracting-features-from-text-bow-tfidf/</link>
+      <pubDate>Wed, 09 May 2018 12:00:00 -0400</pubDate>
+      
+      <guid>https://darwinleung.github.io/posts/2018-05-09-extracting-features-from-text-bow-tfidf/</guid>
+      <description>Extracting features from text Bag-of-words TF-IDF  Term-frequency-inverse document frequency Numeriacal statistics to reflect how important a word is to a document Used as weighting factor in text mining, it can also be used to generate word vector/ matrix representation Increase proportionally to the number of times a word appears in the document offset by the frequency of the word in the corpus  $$ tfidf(t,d,D) = tf(t,d) * idf(t,D) $$</description>
+    </item>
+    
+  </channel>
+</rss>

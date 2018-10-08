@@ -148,29 +148,64 @@
   
   
 
-<h1 id="extracting-features-from-text">Extracting features from text</h1>
+<p>Most of the machine learning algorithms work with numerical features only, they cannot work with raw text directly. Hence, we need to extract/generate numerical representation of textual data. One of the simplest way is to use the occurance or frequency of words.</p>
 
-<h2 id="bag-of-words">Bag-of-words</h2>
+<h2 id="bag-of-words-bow">Bag-of-words (BoW)</h2>
+
+<ul>
+<li><p>Representation of text that describes the occurence of words within a document</p></li>
+
+<li><p>Step:</p>
+
+<ol>
+<li>Find all unique words in a document, used as column (aka token)</li>
+<li>Define the measure method (<sup>1</sup>&frasl;<sub>0</sub> for presence or absence of words, count, tfidf)</li>
+<li>Calculate the measurement for each sentence, each row correspond to each sentence (aka tokenization)</li>
+</ol></li>
+</ul>
+
+<p>Example:</p>
+
+<p>Let&rsquo;s say we have 2 sentences in a document</p>
+
+<ul>
+<li>sentence 1: &ldquo;The earth is round, the pen is blue.&rdquo;</li>
+<li>sentence 2: &ldquo;The earth is flat, my friend is you.&rdquo;</li>
+</ul>
+
+<p>Step1: generate &ldquo;tokens&rdquo; = [&ldquo;the&rdquo;, &ldquo;earth&rdquo;, &ldquo;is&rdquo;, &ldquo;round&rdquo;, &ldquo;pen&rdquo;, &ldquo;blue&rdquo;, &ldquo;my&rdquo;, &ldquo;friend&rdquo;, &ldquo;you&rdquo;]</p>
+
+<p>Step2: word count</p>
+
+<p>Step3: we count the occurance of each words in the tokens</p>
+
+<ul>
+<li>sentence 1: [2,1,2,1,1,1,0,0,0]</li>
+<li>sentence 2: [1,1,2,0,0,0,1,1,1]</li>
+</ul>
+
+<p>Then we can use the resulting vectors as features in ML model.</p>
 
 <h2 id="tf-idf">TF-IDF</h2>
 
+<p>Similar with occurance and frequency, we can use the &ldquo;relative importance&rdquo; a word to a document and TF-IDF is the measure of the importance.</p>
+
 <ul>
 <li>Term-frequency-inverse document frequency</li>
-<li>Numeriacal statistics to reflect how important a word is to a document</li>
-<li>Used as weighting factor in text mining, it can also be used to generate word vector/ matrix representation</li>
 <li>Increase proportionally to the number of times a word appears in the document</li>
 <li>offset by the frequency of the word in the corpus</li>
+<li>Can be used with BoW</li>
 </ul>
 
 <p>$$
 tfidf(t,d,D) = tf(t,d) * idf(t,D)
 $$</p>
 
-<p>where $tf()$ is the term frequency function and $idf()$ is the inverse term frequency function, t is the text of interest, d is the document, D is the corpus containing multiple d. There are many variations on the definition of $tf()$ and $idf()$, one popular definition of $tf()$ is relative term frequency and idf is the log of inverse ratio of documents that include the word t,</p>
+<p>where tf()​ is the term frequency function and idf()​ is the inverse term frequency function, t is the text of interest, d is the document, D is the corpus containing multiple d. There are many variations on the definition of tf()​ and idf()​, one popular definition of tf()​ is relative term frequency and idf is the log of inverse ratio of documents that include the word t,</p>
 
 <h2 id="example">Example</h2>
 
-<p>lets say we have document d1 with 10 words, 2 of them are &ldquo;the&rdquo;, then $tf(&ldquo;this&rdquo;, d1) = <sup>2</sup>&frasl;<sub>10</sub> = 0.2$. lets say we have 5 document in our corpus, and 4 of them consist of the &ldquo;the&rdquo; word, $idf(&ldquo;this&rdquo;, D) = log(<sup>5</sup>&frasl;<sub>4</sub>) \approx 0.1$. Hence, $tfidf(&ldquo;this&rdquo;, d1, D) = 0.2 * 0.1 = 0.02$. It means the word &ldquo;this&rdquo; is not very important in this document. If only 1 of the document consist of the &ldquo;the&rdquo; word, then $idf(&ldquo;this&rdquo;, D) = log(5) = 0.7$ and $tfidf = 0.2 * 0.7 = 0.14$ and so on.</p>
+<p>​Let&rsquo;s say we have document d1 with 10 words, 2 of them are &ldquo;the&rdquo;, then tf(&ldquo;this&rdquo;, d1) = <sup>2</sup>&frasl;<sub>10</sub> = 0.2. Let&rsquo;s say we have 5 document in our corpus, and 4 of them consist of the &ldquo;the&rdquo; word, idf(&ldquo;this&rdquo;, D) = log(<sup>5</sup>&frasl;<sub>4</sub>) ~ 0.1. Hence, tfidf(&ldquo;this&rdquo;, d1, D) = 0.2 * 0.1 = 0.02. It means the word &ldquo;this&rdquo; is not very important in this document. If only 1 of the document consist of the &ldquo;the&rdquo; word, then idf(&ldquo;this&rdquo;, D) = log(5) = 0.7  and tfidf = 0.2 * 0.7 = 0.14 and so on.</p>
 
 <p>Example modified from <a href="https://en.wikipedia.org/wiki/Tf%E2%80%93idf">wiki</a> . Very useful to understand.</p>
 
@@ -214,6 +249,14 @@ tfidf<span style="color:#f92672">.</span>toarray()</code></pre></div>
        [ <span style="color:#ae81ff">0.</span>        ,  <span style="color:#ae81ff">0.43306685</span>,  <span style="color:#ae81ff">0.56943086</span>,  <span style="color:#ae81ff">0.43306685</span>,  <span style="color:#ae81ff">0.</span>        ,
          <span style="color:#ae81ff">0.</span>        ,  <span style="color:#ae81ff">0.33631504</span>,  <span style="color:#ae81ff">0.</span>        ,  <span style="color:#ae81ff">0.43306685</span>]])</code></pre></div>
 <p>Example modified from sklearn <a href="http://scikit-learn.org/stable/tutorial/text_analytics/working_with_text_data.html">doc</a>.</p>
+
+<h2 id="limitations-of-simple-bow">Limitations of simple BoW</h2>
+
+<ol>
+<li>The order of the words are ignored, let&rsquo;s say we know &ldquo;not&rdquo;, &ldquo;bad&rdquo;, &ldquo;good&rdquo;, &ldquo;very&rdquo; are in the same sentence, given we only know their occurance, we won&rsquo;t be able to know whether they mean &ldquo;very good&rdquo; or &ldquo;very bad&rdquo;, &ldquo;not good&rdquo; or &ldquo;not bad&rdquo; etc. There is some useful information loss, it can be partly solved by using <a href="https://en.wikipedia.org/wiki/N-gram">N-gram</a>.</li>
+<li>The meaning or context of words are not able to captured in the model, similar with the example above, &ldquo;not bad&rdquo; is close to &ldquo;good&rdquo;, but in our model, they are 3 separate columns, and it is very hard to assoicate them unless we have a huge dataset with longer sentences.</li>
+<li>The numbers of features generated will be huge, since we will get 1 column for each unique word in the document, also if we have a small corpus or they are all unique, it provides very little useful information for the machine learning model in the next step. This issue of sparity may cause problems in some ML models.</li>
+</ol>
 
 </div>
             <div class="footer">

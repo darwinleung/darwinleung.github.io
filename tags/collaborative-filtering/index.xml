@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Collaborative Filtering on DL</title>
+    <link>https://darwinleung.github.io/tags/collaborative-filtering/</link>
+    <description>Recent content in Collaborative Filtering on DL</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 01 Jul 2018 12:00:00 -0400</lastBuildDate>
+    
+	<atom:link href="https://darwinleung.github.io/tags/collaborative-filtering/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Personalized recommendation system for articles - Collaborative Filtering</title>
+      <link>https://darwinleung.github.io/posts/2018-07-01-personalized-recommendation-system-collaborative-filtering/</link>
+      <pubDate>Sun, 01 Jul 2018 12:00:00 -0400</pubDate>
+      
+      <guid>https://darwinleung.github.io/posts/2018-07-01-personalized-recommendation-system-collaborative-filtering/</guid>
+      <description>Personalized recommendation system for articles - Collaborative Filtering From Andrew Ng&amp;rsquo;s course, I learned there are 2 popular ways to built recommendation system: Collaborative Filtering and Content-based. Recently, I have a chance to research and implement them at work. Here is a Proof-of-Concept example.
+Recommendation system is about recommending items to users. Let&amp;rsquo;s say we only have:
+ Items: 6 articles: [&amp;lsquo;dog1&amp;rsquo;, &amp;lsquo;dog2&amp;rsquo;, &amp;lsquo;cat&amp;rsquo;, &amp;lsquo;food1&amp;rsquo;, &amp;lsquo;food2&amp;rsquo;, &amp;lsquo;food3&amp;rsquo;]. (Note: we label them just for easier explanation, it is not necessary to have any context about the items, they can be random ids) Users: 5 visitors [&amp;lsquo;user_0&amp;rsquo;,&amp;lsquo;user_1&amp;rsquo;,&amp;lsquo;user_2&amp;rsquo;, &amp;lsquo;user_3&amp;rsquo;, &amp;lsquo;user_4&amp;rsquo;, &amp;lsquo;user_5&amp;rsquo;]  Collaborative Filtering  Collaborative filtering approaches build a model from a user&amp;rsquo;s past behaviour (items previously purchased or selected and/or numerical ratings given to those items) as well as similar decisions made by other users.</description>
+    </item>
+    
+  </channel>
+</rss>

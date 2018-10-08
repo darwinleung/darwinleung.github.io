@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Content Based on DL</title>
+    <link>https://darwinleung.github.io/tags/content-based/</link>
+    <description>Recent content in Content Based on DL</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 02 Jul 2018 12:00:00 -0400</lastBuildDate>
+    
+	<atom:link href="https://darwinleung.github.io/tags/content-based/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Personalized recommendation system for articles - Content-based</title>
+      <link>https://darwinleung.github.io/posts/2018-07-02-personalized-recommendation-system-content-based/</link>
+      <pubDate>Mon, 02 Jul 2018 12:00:00 -0400</pubDate>
+      
+      <guid>https://darwinleung.github.io/posts/2018-07-02-personalized-recommendation-system-content-based/</guid>
+      <description>Personalized recommendation system for articles - Content-based We use the same example from CF post, let&amp;rsquo;s say we have the same 6 articles and 5 visitors and their view history data. Also, we have data about the context of each articles, like title, author, categories, length, no. of picture, and the words from the articles. We might also have data from the user side like their demographic, gender, ages, country etc.</description>
+    </item>
+    
+  </channel>
+</rss>

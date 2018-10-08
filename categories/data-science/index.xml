@@ -6,10 +6,30 @@
     <description>Recent content in Data Science on DL</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 12 May 2018 12:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 02 Jul 2018 12:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://darwinleung.github.io/categories/data-science/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Personalized recommendation system for articles - Content-based</title>
+      <link>https://darwinleung.github.io/posts/2018-07-02-personalized-recommendation-system-content-based/</link>
+      <pubDate>Mon, 02 Jul 2018 12:00:00 -0400</pubDate>
+      
+      <guid>https://darwinleung.github.io/posts/2018-07-02-personalized-recommendation-system-content-based/</guid>
+      <description>Personalized recommendation system for articles - Content-based We use the same example from CF post, let&amp;rsquo;s say we have the same 6 articles and 5 visitors and their view history data. Also, we have data about the context of each articles, like title, author, categories, length, no. of picture, and the words from the articles. We might also have data from the user side like their demographic, gender, ages, country etc.</description>
+    </item>
+    
+    <item>
+      <title>Personalized recommendation system for articles - Collaborative Filtering</title>
+      <link>https://darwinleung.github.io/posts/2018-07-01-personalized-recommendation-system-collaborative-filtering/</link>
+      <pubDate>Sun, 01 Jul 2018 12:00:00 -0400</pubDate>
+      
+      <guid>https://darwinleung.github.io/posts/2018-07-01-personalized-recommendation-system-collaborative-filtering/</guid>
+      <description>Personalized recommendation system for articles - Collaborative Filtering From Andrew Ng&amp;rsquo;s course, I learned there are 2 popular ways to built recommendation system: Collaborative Filtering and Content-based. Recently, I have a chance to research and implement them at work. Here is a Proof-of-Concept example.
+Recommendation system is about recommending items to users. Let&amp;rsquo;s say we only have:
+ Items: 6 articles: [&amp;lsquo;dog1&amp;rsquo;, &amp;lsquo;dog2&amp;rsquo;, &amp;lsquo;cat&amp;rsquo;, &amp;lsquo;food1&amp;rsquo;, &amp;lsquo;food2&amp;rsquo;, &amp;lsquo;food3&amp;rsquo;]. (Note: we label them just for easier explanation, it is not necessary to have any context about the items, they can be random ids) Users: 5 visitors [&amp;lsquo;user_0&amp;rsquo;,&amp;lsquo;user_1&amp;rsquo;,&amp;lsquo;user_2&amp;rsquo;, &amp;lsquo;user_3&amp;rsquo;, &amp;lsquo;user_4&amp;rsquo;, &amp;lsquo;user_5&amp;rsquo;]  Collaborative Filtering  Collaborative filtering approaches build a model from a user&amp;rsquo;s past behaviour (items previously purchased or selected and/or numerical ratings given to those items) as well as similar decisions made by other users.</description>
+    </item>
     
     <item>
       <title>How does imputation work</title>
@@ -27,7 +47,10 @@ Imputer in sklearn The Imputer function in the sklearn library is commonly used 
       <pubDate>Wed, 09 May 2018 12:00:00 -0400</pubDate>
       
       <guid>https://darwinleung.github.io/posts/2018-05-09-extracting-features-from-text-bow-tfidf/</guid>
-      <description>Extracting features from text Bag-of-words TF-IDF  Term-frequency-inverse document frequency Numeriacal statistics to reflect how important a word is to a document Used as weighting factor in text mining, it can also be used to generate word vector/ matrix representation Increase proportionally to the number of times a word appears in the document offset by the frequency of the word in the corpus  $$ tfidf(t,d,D) = tf(t,d) * idf(t,D) $$</description>
+      <description>Most of the machine learning algorithms work with numerical features only, they cannot work with raw text directly. Hence, we need to extract/generate numerical representation of textual data. One of the simplest way is to use the occurance or frequency of words.
+Bag-of-words (BoW)  Representation of text that describes the occurence of words within a document
+ Step:
+ Find all unique words in a document, used as column (aka token) Define the measure method (1&amp;frasl;0 for presence or absence of words, count, tfidf) Calculate the measurement for each sentence, each row correspond to each sentence (aka tokenization)   Example:</description>
     </item>
     
     <item>

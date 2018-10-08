@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Sklearn on DL</title>
-    <link>https://darwinleung.github.io/tags/sklearn/</link>
-    <description>Recent content in Sklearn on DL</description>
+    <title>Knn on DL</title>
+    <link>https://darwinleung.github.io/tags/knn/</link>
+    <description>Recent content in Knn on DL</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 02 Jul 2018 12:00:00 -0400</lastBuildDate>
     
-	<atom:link href="https://darwinleung.github.io/tags/sklearn/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://darwinleung.github.io/tags/knn/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -29,28 +29,6 @@
       <description>Personalized recommendation system for articles - Collaborative Filtering From Andrew Ng&amp;rsquo;s course, I learned there are 2 popular ways to built recommendation system: Collaborative Filtering and Content-based. Recently, I have a chance to research and implement them at work. Here is a Proof-of-Concept example.
 Recommendation system is about recommending items to users. Let&amp;rsquo;s say we only have:
  Items: 6 articles: [&amp;lsquo;dog1&amp;rsquo;, &amp;lsquo;dog2&amp;rsquo;, &amp;lsquo;cat&amp;rsquo;, &amp;lsquo;food1&amp;rsquo;, &amp;lsquo;food2&amp;rsquo;, &amp;lsquo;food3&amp;rsquo;]. (Note: we label them just for easier explanation, it is not necessary to have any context about the items, they can be random ids) Users: 5 visitors [&amp;lsquo;user_0&amp;rsquo;,&amp;lsquo;user_1&amp;rsquo;,&amp;lsquo;user_2&amp;rsquo;, &amp;lsquo;user_3&amp;rsquo;, &amp;lsquo;user_4&amp;rsquo;, &amp;lsquo;user_5&amp;rsquo;]  Collaborative Filtering  Collaborative filtering approaches build a model from a user&amp;rsquo;s past behaviour (items previously purchased or selected and/or numerical ratings given to those items) as well as similar decisions made by other users.</description>
-    </item>
-    
-    <item>
-      <title>How does imputation work</title>
-      <link>https://darwinleung.github.io/posts/2018-05-12-imputation-sklearn/</link>
-      <pubDate>Sat, 12 May 2018 12:00:00 -0400</pubDate>
-      
-      <guid>https://darwinleung.github.io/posts/2018-05-12-imputation-sklearn/</guid>
-      <description>How does imputation work? Imputation is a pre-processing technique to handle missing data before fitting the data into model. One of the simplest implementation is to estimate the missing values using the mean/median or the most frequent value of the row/ column where the missing values are located. There are more advanced ways to impute data like regressions, multiple imputation etc.
-Imputer in sklearn The Imputer function in the sklearn library is commonly used in various tutorials.</description>
-    </item>
-    
-    <item>
-      <title>Extracting features from text - BoW, tfidf</title>
-      <link>https://darwinleung.github.io/posts/2018-05-09-extracting-features-from-text-bow-tfidf/</link>
-      <pubDate>Wed, 09 May 2018 12:00:00 -0400</pubDate>
-      
-      <guid>https://darwinleung.github.io/posts/2018-05-09-extracting-features-from-text-bow-tfidf/</guid>
-      <description>Most of the machine learning algorithms work with numerical features only, they cannot work with raw text directly. Hence, we need to extract/generate numerical representation of textual data. One of the simplest way is to use the occurance or frequency of words.
-Bag-of-words (BoW)  Representation of text that describes the occurence of words within a document
- Step:
- Find all unique words in a document, used as column (aka token) Define the measure method (1&amp;frasl;0 for presence or absence of words, count, tfidf) Calculate the measurement for each sentence, each row correspond to each sentence (aka tokenization)   Example:</description>
     </item>
     
   </channel>

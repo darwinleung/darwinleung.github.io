@@ -21,11 +21,29 @@
     </item>
     
     <item>
+      <title>Collaborative Filtering</title>
+      <link>https://darwinleung.github.io/tags/collaborative-filtering/</link>
+      <pubDate>Sun, 01 Jul 2018 12:00:00 -0400</pubDate>
+      
+      <guid>https://darwinleung.github.io/tags/collaborative-filtering/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Conda</title>
       <link>https://darwinleung.github.io/tags/conda/</link>
       <pubDate>Fri, 30 Mar 2018 12:37:00 -0400</pubDate>
       
       <guid>https://darwinleung.github.io/tags/conda/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Content Based</title>
+      <link>https://darwinleung.github.io/tags/content-based/</link>
+      <pubDate>Mon, 02 Jul 2018 12:00:00 -0400</pubDate>
+      
+      <guid>https://darwinleung.github.io/tags/content-based/</guid>
       <description></description>
     </item>
     
@@ -93,6 +111,15 @@
     </item>
     
     <item>
+      <title>Knn</title>
+      <link>https://darwinleung.github.io/tags/knn/</link>
+      <pubDate>Mon, 02 Jul 2018 12:00:00 -0400</pubDate>
+      
+      <guid>https://darwinleung.github.io/tags/knn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Mathjax</title>
       <link>https://darwinleung.github.io/tags/mathjax/</link>
       <pubDate>Wed, 18 Apr 2018 12:00:00 -0400</pubDate>
@@ -131,16 +158,25 @@
     <item>
       <title>Python</title>
       <link>https://darwinleung.github.io/tags/python/</link>
-      <pubDate>Sat, 12 May 2018 12:00:00 -0400</pubDate>
+      <pubDate>Mon, 02 Jul 2018 12:00:00 -0400</pubDate>
       
       <guid>https://darwinleung.github.io/tags/python/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>Recommendation</title>
+      <link>https://darwinleung.github.io/tags/recommendation/</link>
+      <pubDate>Mon, 02 Jul 2018 12:00:00 -0400</pubDate>
+      
+      <guid>https://darwinleung.github.io/tags/recommendation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Sklearn</title>
       <link>https://darwinleung.github.io/tags/sklearn/</link>
-      <pubDate>Sat, 12 May 2018 12:00:00 -0400</pubDate>
+      <pubDate>Mon, 02 Jul 2018 12:00:00 -0400</pubDate>
       
       <guid>https://darwinleung.github.io/tags/sklearn/</guid>
       <description></description>

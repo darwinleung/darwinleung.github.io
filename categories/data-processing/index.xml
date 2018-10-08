@@ -27,7 +27,10 @@ Imputer in sklearn The Imputer function in the sklearn library is commonly used 
       <pubDate>Wed, 09 May 2018 12:00:00 -0400</pubDate>
       
       <guid>https://darwinleung.github.io/posts/2018-05-09-extracting-features-from-text-bow-tfidf/</guid>
-      <description>Extracting features from text Bag-of-words TF-IDF  Term-frequency-inverse document frequency Numeriacal statistics to reflect how important a word is to a document Used as weighting factor in text mining, it can also be used to generate word vector/ matrix representation Increase proportionally to the number of times a word appears in the document offset by the frequency of the word in the corpus  $$ tfidf(t,d,D) = tf(t,d) * idf(t,D) $$</description>
+      <description>Most of the machine learning algorithms work with numerical features only, they cannot work with raw text directly. Hence, we need to extract/generate numerical representation of textual data. One of the simplest way is to use the occurance or frequency of words.
+Bag-of-words (BoW)  Representation of text that describes the occurence of words within a document
+ Step:
+ Find all unique words in a document, used as column (aka token) Define the measure method (1&amp;frasl;0 for presence or absence of words, count, tfidf) Calculate the measurement for each sentence, each row correspond to each sentence (aka tokenization)   Example:</description>
     </item>
     
   </channel>

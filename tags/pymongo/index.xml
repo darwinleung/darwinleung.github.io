@@ -19,9 +19,7 @@
       <guid>https://darwinleung.github.io/posts/2018-04-10-mongodb-notes/</guid>
       <description>insertMany(), default ordered: true, once it encounters as error, insert stop. If ordered set to false, it will insert the rest of documents despite any errors.
  ObjectId: 12-Byte Hex string
-_ _ _ _ , _ _ _ , _ _ , _ _ _
-Date (time stamp), Mac addr, PID (process ID), Counter
- Exact match on array field example: db.movieDetails.find({&amp;ldquo;writers&amp;rdquo;: [&amp;ldquo;A&amp;rdquo;, &amp;ldquo;B&amp;rdquo;]}).count(), ordering matters. To find a match within array: db.</description>
+  | _ _ _ _ | _ _ _ | _ _ | _ _ _ | | &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash; | &amp;mdash;&amp;mdash;&amp;ndash; | &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;- | &amp;mdash;&amp;mdash;- | | Date (time stamp) | Mac addr | PID (process ID) | Counter |</description>
     </item>
     
   </channel>

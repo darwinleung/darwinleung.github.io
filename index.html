@@ -99,6 +99,29 @@
             <div class="posts">
   
         <div class="post">
+        <h1 class="post-title"><a href="https://darwinleung.github.io/posts/2018-09-01-modelling-snowplow-event-data-notes/">Modelling Snowplow event data notes</a></h1>
+        <span class="post-date">Sep 1, 2018</span>
+        Modelling Snowplow event data notes Goals:
+ Modelling pageviews level metric (timeonpage, scroll depth) Modelling sessions level metric (session count, session duration)  Note: All queries in this doc are NOT tested or validated, they are based on assumptions and my guess only for high level understanding only. Please always consult Snowflake and make modification accordingly before using them for production.
+Validating readily available metrics First, we would like to see if the pageviews count collected from Snowplow match roughly with the data we collected from GA:
+        
+        <div class="read-more-link">
+            <a href="/posts/2018-09-01-modelling-snowplow-event-data-notes/">Read More…</a>
+        </div>
+        
+        </div>
+        <div class="post">
+        <h1 class="post-title"><a href="https://darwinleung.github.io/posts/2018-08-01-bigquery-notes/">BigQuery notes</a></h1>
+        <span class="post-date">Aug 1, 2018</span>
+        There is a new project at work, we store snowplow events data on Google BigQuery (vs on AWS S3 conventionally). The query language is very similar with SQL however, there is some differences in term of best practice and cost. Here is some notes.
+BigQuery vs MySQL BigQuery: fully-managed cloud-based enterprise data warehouse. Good for OLAP task (i.e. low volume of transactions, complex query with aggregation). Distributed storage and parallel computation for query big scale data very fast.
+        
+        <div class="read-more-link">
+            <a href="/posts/2018-08-01-bigquery-notes/">Read More…</a>
+        </div>
+        
+        </div>
+        <div class="post">
         <h1 class="post-title"><a href="https://darwinleung.github.io/posts/2018-07-02-personalized-recommendation-system-content-based/">Personalized recommendation system for articles - Content-based</a></h1>
         <span class="post-date">Jul 2, 2018</span>
         Personalized recommendation system for articles - Content-based We use the same example from CF post, let&rsquo;s say we have the same 6 articles and 5 visitors and their view history data. Also, we have data about the context of each articles, like title, author, categories, length, no. of picture, and the words from the articles. We might also have data from the user side like their demographic, gender, ages, country etc.
@@ -159,9 +182,7 @@ Bag-of-words (BoW)  Representation of text that describes the occurence of words
         <span class="post-date">Apr 10, 2018</span>
         insertMany(), default ordered: true, once it encounters as error, insert stop. If ordered set to false, it will insert the rest of documents despite any errors.
  ObjectId: 12-Byte Hex string
-_ _ _ _ , _ _ _ , _ _ , _ _ _
-Date (time stamp), Mac addr, PID (process ID), Counter
- Exact match on array field example: db.movieDetails.find({&ldquo;writers&rdquo;: [&ldquo;A&rdquo;, &ldquo;B&rdquo;]}).count(), ordering matters. To find a match within array: db.
+  | _ _ _ _ | _ _ _ | _ _ | _ _ _ | | &mdash;&mdash;&mdash;&mdash;&mdash;&ndash; | &mdash;&mdash;&ndash; | &mdash;&mdash;&mdash;&mdash;&mdash;- | &mdash;&mdash;- | | Date (time stamp) | Mac addr | PID (process ID) | Counter |
         
         <div class="read-more-link">
             <a href="/posts/2018-04-10-mongodb-notes/">Read More…</a>
@@ -245,6 +266,18 @@ title: &quot;Setting up this blog&quot; date: 2018-03-25T14:47:00-04:00 draft: f
         
         <div class="read-more-link">
             <a href="/posts/2018-03-25-setting-up-this-blog/">Read More…</a>
+        </div>
+        
+        </div>
+        <div class="post">
+        <h1 class="post-title"><a href="https://darwinleung.github.io/posts/2018-03-01-first-post/">First Post - 2018 Goals</a></h1>
+        <span class="post-date">Mar 1, 2018</span>
+        This is my first personal blog and this is my first blog post, building a blog is one of the goals I set in the beginning of 2018. 2018 would be my year of learning, I will spend my spare time on learning for both professionally and personally. I am lucky that there are many area overlapping.
+There are 3 main area I want to learn:
+Machine Learning As an aspiring data scientist, I need to build a strong foundation on statistical and machine learning and gain exposure in deep learning.
+        
+        <div class="read-more-link">
+            <a href="/posts/2018-03-01-first-post/">Read More…</a>
         </div>
         
         </div>

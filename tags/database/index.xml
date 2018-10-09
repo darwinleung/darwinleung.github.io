@@ -6,10 +6,20 @@
     <description>Recent content in Database on DL</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 Apr 2018 12:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 01 Aug 2018 12:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://darwinleung.github.io/tags/database/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>BigQuery notes</title>
+      <link>https://darwinleung.github.io/posts/2018-08-01-bigquery-notes/</link>
+      <pubDate>Wed, 01 Aug 2018 12:00:00 -0400</pubDate>
+      
+      <guid>https://darwinleung.github.io/posts/2018-08-01-bigquery-notes/</guid>
+      <description>There is a new project at work, we store snowplow events data on Google BigQuery (vs on AWS S3 conventionally). The query language is very similar with SQL however, there is some differences in term of best practice and cost. Here is some notes.
+BigQuery vs MySQL BigQuery: fully-managed cloud-based enterprise data warehouse. Good for OLAP task (i.e. low volume of transactions, complex query with aggregation). Distributed storage and parallel computation for query big scale data very fast.</description>
+    </item>
     
     <item>
       <title>MongoDB for Developer M101P notes</title>
@@ -19,9 +29,7 @@
       <guid>https://darwinleung.github.io/posts/2018-04-10-mongodb-notes/</guid>
       <description>insertMany(), default ordered: true, once it encounters as error, insert stop. If ordered set to false, it will insert the rest of documents despite any errors.
  ObjectId: 12-Byte Hex string
-_ _ _ _ , _ _ _ , _ _ , _ _ _
-Date (time stamp), Mac addr, PID (process ID), Counter
- Exact match on array field example: db.movieDetails.find({&amp;ldquo;writers&amp;rdquo;: [&amp;ldquo;A&amp;rdquo;, &amp;ldquo;B&amp;rdquo;]}).count(), ordering matters. To find a match within array: db.</description>
+  | _ _ _ _ | _ _ _ | _ _ | _ _ _ | | &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash; | &amp;mdash;&amp;mdash;&amp;ndash; | &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;- | &amp;mdash;&amp;mdash;- | | Date (time stamp) | Mac addr | PID (process ID) | Counter |</description>
     </item>
     
     <item>

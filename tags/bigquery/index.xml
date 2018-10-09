@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bigquery on DL</title>
+    <link>https://darwinleung.github.io/tags/bigquery/</link>
+    <description>Recent content in Bigquery on DL</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 01 Sep 2018 12:00:00 -0400</lastBuildDate>
+    
+	<atom:link href="https://darwinleung.github.io/tags/bigquery/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Modelling Snowplow event data notes</title>
+      <link>https://darwinleung.github.io/posts/2018-09-01-modelling-snowplow-event-data-notes/</link>
+      <pubDate>Sat, 01 Sep 2018 12:00:00 -0400</pubDate>
+      
+      <guid>https://darwinleung.github.io/posts/2018-09-01-modelling-snowplow-event-data-notes/</guid>
+      <description>Modelling Snowplow event data notes Goals:
+ Modelling pageviews level metric (timeonpage, scroll depth) Modelling sessions level metric (session count, session duration)  Note: All queries in this doc are NOT tested or validated, they are based on assumptions and my guess only for high level understanding only. Please always consult Snowflake and make modification accordingly before using them for production.
+Validating readily available metrics First, we would like to see if the pageviews count collected from Snowplow match roughly with the data we collected from GA:</description>
+    </item>
+    
+    <item>
+      <title>BigQuery notes</title>
+      <link>https://darwinleung.github.io/posts/2018-08-01-bigquery-notes/</link>
+      <pubDate>Wed, 01 Aug 2018 12:00:00 -0400</pubDate>
+      
+      <guid>https://darwinleung.github.io/posts/2018-08-01-bigquery-notes/</guid>
+      <description>There is a new project at work, we store snowplow events data on Google BigQuery (vs on AWS S3 conventionally). The query language is very similar with SQL however, there is some differences in term of best practice and cost. Here is some notes.
+BigQuery vs MySQL BigQuery: fully-managed cloud-based enterprise data warehouse. Good for OLAP task (i.e. low volume of transactions, complex query with aggregation). Distributed storage and parallel computation for query big scale data very fast.</description>
+    </item>
+    
+  </channel>
+</rss>

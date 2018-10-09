@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://darwinleung.github.io/posts/2018-09-01-modelling-snowplow-event-data-notes/</loc>
+    <lastmod>2018-09-01T12:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://darwinleung.github.io/posts/2018-08-01-bigquery-notes/</loc>
+    <lastmod>2018-08-01T12:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://darwinleung.github.io/posts/2018-07-02-personalized-recommendation-system-content-based/</loc>
     <lastmod>2018-07-02T12:00:00-04:00</lastmod>
   </url>
@@ -68,7 +78,24 @@
   </url>
   
   <url>
+    <loc>https://darwinleung.github.io/posts/2018-03-01-first-post/</loc>
+    <lastmod>2018-03-01T12:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://darwinleung.github.io/about/</loc>
+  </url>
+  
+  <url>
+    <loc>https://darwinleung.github.io/categories/analytics/</loc>
+    <lastmod>2018-09-01T12:00:00-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://darwinleung.github.io/tags/bigquery/</loc>
+    <lastmod>2018-09-01T12:00:00-04:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -79,6 +106,7 @@
   
   <url>
     <loc>https://darwinleung.github.io/categories/</loc>
+    <lastmod>2018-09-01T12:00:00-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -106,19 +134,19 @@
   
   <url>
     <loc>https://darwinleung.github.io/</loc>
-    <lastmod>2018-07-02T12:00:00-04:00</lastmod>
+    <lastmod>2018-09-01T12:00:00-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://darwinleung.github.io/categories/data-engineering/</loc>
-    <lastmod>2018-04-10T12:00:00-04:00</lastmod>
+    <lastmod>2018-08-01T12:00:00-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://darwinleung.github.io/categories/data-processing/</loc>
-    <lastmod>2018-05-12T12:00:00-04:00</lastmod>
+    <lastmod>2018-09-01T12:00:00-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -130,13 +158,13 @@
   
   <url>
     <loc>https://darwinleung.github.io/tags/database/</loc>
-    <lastmod>2018-04-10T12:00:00-04:00</lastmod>
+    <lastmod>2018-08-01T12:00:00-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://darwinleung.github.io/categories/feature-extraction/</loc>
-    <lastmod>2018-07-02T12:00:00-04:00</lastmod>
+    <lastmod>2018-09-01T12:00:00-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -208,19 +236,31 @@
   
   <url>
     <loc>https://darwinleung.github.io/tags/mysql/</loc>
-    <lastmod>2018-04-04T12:00:00-04:00</lastmod>
+    <lastmod>2018-08-01T12:00:00-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://darwinleung.github.io/tags/notes/</loc>
+    <lastmod>2018-08-01T12:00:00-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://darwinleung.github.io/tags/personal/</loc>
+    <lastmod>2018-03-01T12:00:00-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://darwinleung.github.io/posts/</loc>
-    <lastmod>2018-07-02T12:00:00-04:00</lastmod>
+    <lastmod>2018-09-01T12:00:00-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://darwinleung.github.io/categories/programming/</loc>
-    <lastmod>2018-04-18T12:00:00-04:00</lastmod>
+    <lastmod>2018-09-01T12:00:00-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -255,14 +295,20 @@
   </url>
   
   <url>
+    <loc>https://darwinleung.github.io/tags/snowplow/</loc>
+    <lastmod>2018-09-01T12:00:00-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://darwinleung.github.io/tags/sql/</loc>
-    <lastmod>2018-04-04T12:00:00-04:00</lastmod>
+    <lastmod>2018-09-01T12:00:00-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://darwinleung.github.io/tags/</loc>
-    <lastmod>2018-05-09T12:00:00-04:00</lastmod>
+    <lastmod>2018-09-01T12:00:00-04:00</lastmod>
     <priority>0</priority>
   </url>
   

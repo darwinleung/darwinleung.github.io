@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en-us" class="wf-firasans-n4-active wf-active">
+	<head>
+    <link href="http://gmpg.org/xfn/11" rel="profile">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Enable responsiveness on mobile devices --> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    
+    	
+    <meta name="generator" content="Hugo 0.36.1" />
+    
+    <title>BigQuery notes &middot; DL</title>
+    <meta content="BigQuery notes - DL" property="og:title">
+    <meta content=" - " property="og:description">    
+    <!-- CSS --> 
+    <link rel="stylesheet" href="https://darwinleung.github.io/css/print.css" media="print">
+    <link rel="stylesheet" href="https://darwinleung.github.io/css/poole.css">
+    <link rel="stylesheet" href="https://darwinleung.github.io/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,500">
+    
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+    <!-- highlight.js--> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dark.min.css">
+    <!-- Customised CSS -->
+    <link rel="stylesheet" href="https://darwinleung.github.io/css/custom.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    
+
+	</head>
+    <body class="theme-base-0g " >
+        <div class="sidebar">
+	<div class="container text-center sidebar-sticky">
+		<div class="sidebar-about text-center">
+			<a href="https://darwinleung.github.io/"><h1 class="brand">DL</h1></a>
+			 <img src="/img/DL_symbol.jpg" alt="Author Image" class="img-circle headshot center"> 
+			<p class="lead">
+				 Darwin&#39;s personal blog 
+			</p>
+		</div>
+		
+<div>
+	<ul class="sidebar-nav">
+		
+		
+				<li>
+					<a href="/posts/"> <span>Posts</span></a>
+				</li>
+				<li>
+					<a href="/about/"> <span>About</span></a>
+				</li>
+				<li>
+					<a href="/contact/"> <span>Contact</span></a>
+				</li>
+		</li>
+	</ul>
+</div>
+
+        <p>
+		<section class="row text-center">
+	
+	
+	
+	&nbsp;<a href="https://github.com/darwinleung"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	&nbsp;<a href="https://linkedin.com/in/darwinleung"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	&nbsp;<a href="mailto:darwinlkh@gmail.com"><i class="fas fa-at fa-lg" aria-hidden="true"></i></a>
+	
+</section>
+
+        </p>
+		<p class="copyright">Built with Hugo and Hyde-hyde ©2018.
+        </p>
+	</div>
+	<div>
+	</div>
+</div>
+
+        <div class="content container">
+            <div class="post">
+  <h1>BigQuery notes</h1>
+  
+  <div class="col-sm-12 col-md-12">
+    <span class="text-left post-date meta">
+            
+       
+        <i class="fas fa-calendar-alt"></i> Aug 1, 2018
+      
+      
+        
+        
+            in
+            
+            
+                <a class="meta" href="/categories/data-engineering">DATA ENGINEERING</a>
+                ,
+            
+                <a class="meta" href="/categories/programming">PROGRAMMING</a>
+                
+            
+        
+      
+      
+      
+        
+        
+            <br/>
+             <i class="fas fa-tags"></i>
+            
+            <a class="meta" href="/tags/bigquery">bigquery</a> 
+        
+            <a class="meta" href="/tags/mysql">mysql</a> 
+        
+            <a class="meta" href="/tags/database">database</a> 
+        
+            <a class="meta" href="/tags/notes">notes</a>
+        
+      
+      
+      </span>  
+  </div>    
+  
+  
+
+<p>There is a new project at work, we store snowplow events data on Google BigQuery (vs on AWS S3 conventionally). The query language is very similar with SQL however, there is some differences in term of best practice and cost. Here is some notes.</p>
+
+<h1 id="bigquery-vs-mysql">BigQuery vs MySQL</h1>
+
+<p>BigQuery: fully-managed cloud-based enterprise data warehouse. Good for OLAP task (i.e. low volume of transactions, complex query with aggregation). Distributed storage and parallel computation for query big scale data very fast.</p>
+
+<p>MySQL: self-hosted (can be managed) relational database. Good for OLTP tasks (i.e. large number of short online transactions like INSERT, DELETE, UPDATE). Scalability and performance limited to an extend.</p>
+
+<h1 id="bigquery-query-cost">BigQuery Query cost</h1>
+
+<h3 id="query-pricing">Query pricing</h3>
+
+<p>BigQuery charges by using one metric: <strong>the number of bytes processed</strong>.</p>
+
+<p>First 1TB per month is free, then $5 per TB.</p>
+
+<p>BigQuery uses a <a href="https://en.wikipedia.org/wiki/Column-oriented_DBMS">columnar data structure</a>. According to the total data processed in the columns you select, even if you set an explicit <code>LIMIT</code> on the results and the total data per column is calculated based on the types of data in the column.</p>
+
+<p>source: <a href="https://cloud.google.com/bigquery/pricing#on_demand_pricing">https://cloud.google.com/bigquery/pricing#on_demand_pricing</a></p>
+
+<h3 id="storage-pricing">Storage pricing</h3>
+
+<p>based on uncompressed data size, and based on data types of individual columns.</p>
+
+<p>Active storage: first 10 GB per month is free, then $0.02 per GB</p>
+
+<p>Long-term storage: first 10 per month is free, then $0.01 per GB</p>
+
+<p>*Long-term storage means a table that is not edited for 90 consecutive days. Once the table is edited, the price reverts back to regular storage and the 90-day timer reset. For more details: <a href="https://cloud.google.com/bigquery/pricing#long-term-storage">https://cloud.google.com/bigquery/pricing#long-term-storage</a></p>
+
+<h1 id="best-practice-using-bigquery">Best practice using BigQuery</h1>
+
+<ol>
+<li><p>Avoid SELETE *</p>
+
+<ul>
+<li>full scan of every column</li>
+<li>Use data preview for explorative queries</li>
+</ul></li>
+
+<li><p>Using query validator to estimate cost <img src="https://cloud.google.com/bigquery/images/query-validator.png" alt="Query validator" /></p></li>
+
+<li><p>Materialize query results in stages</p>
+
+<ul>
+<li>cost of storing materialized results &lt; cost of processing large amounts of data</li>
+<li>Write interim query results by writing them to a destination table</li>
+</ul></li>
+
+<li><p>Denormalize data &gt; relational schema</p>
+
+<ul>
+<li><p>Avoid joining tables, take advantage of nested and repeated fields</p></li>
+
+<li><p>Increase in storage costs &lt; performance gains</p></li>
+
+<li><p>Joins require data coordination (communication bandwidth), denormalization localizes data and execution can be done in parallel</p></li>
+</ul></li>
+
+<li><p>Nested and repeated fields &gt; completely flat</p>
+
+<ul>
+<li>it might requires extra grouping and hence network communication / shuffling)</li>
+</ul></li>
+</ol>
+
+<h1 id="views-at-bigquery">Views at BigQuery</h1>
+
+<ul>
+<li>Similar with MySQL</li>
+<li>Logical views, not materialized view. Each time we run a view, it runs the underlying query and bill according to the the total amount of data in all tables from the query.</li>
+</ul>
+
+</div>
+            <div class="footer">
+                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+<script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+</script>
+
+
+
+            </div>
+        </div>
+        
+        
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-120240510-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+        
+    </body>
+</html>

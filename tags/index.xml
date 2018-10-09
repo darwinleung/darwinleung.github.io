@@ -6,10 +6,19 @@
     <description>Recent content in Tags on DL</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 May 2018 12:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Sat, 01 Sep 2018 12:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://darwinleung.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Bigquery</title>
+      <link>https://darwinleung.github.io/tags/bigquery/</link>
+      <pubDate>Sat, 01 Sep 2018 12:00:00 -0400</pubDate>
+      
+      <guid>https://darwinleung.github.io/tags/bigquery/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Bow</title>
@@ -50,7 +59,7 @@
     <item>
       <title>Database</title>
       <link>https://darwinleung.github.io/tags/database/</link>
-      <pubDate>Tue, 10 Apr 2018 12:00:00 -0400</pubDate>
+      <pubDate>Wed, 01 Aug 2018 12:00:00 -0400</pubDate>
       
       <guid>https://darwinleung.github.io/tags/database/</guid>
       <description></description>
@@ -140,9 +149,27 @@
     <item>
       <title>Mysql</title>
       <link>https://darwinleung.github.io/tags/mysql/</link>
-      <pubDate>Wed, 04 Apr 2018 12:00:00 -0400</pubDate>
+      <pubDate>Wed, 01 Aug 2018 12:00:00 -0400</pubDate>
       
       <guid>https://darwinleung.github.io/tags/mysql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Notes</title>
+      <link>https://darwinleung.github.io/tags/notes/</link>
+      <pubDate>Wed, 01 Aug 2018 12:00:00 -0400</pubDate>
+      
+      <guid>https://darwinleung.github.io/tags/notes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Personal</title>
+      <link>https://darwinleung.github.io/tags/personal/</link>
+      <pubDate>Thu, 01 Mar 2018 12:00:00 -0400</pubDate>
+      
+      <guid>https://darwinleung.github.io/tags/personal/</guid>
       <description></description>
     </item>
     
@@ -183,9 +210,18 @@
     </item>
     
     <item>
+      <title>Snowplow</title>
+      <link>https://darwinleung.github.io/tags/snowplow/</link>
+      <pubDate>Sat, 01 Sep 2018 12:00:00 -0400</pubDate>
+      
+      <guid>https://darwinleung.github.io/tags/snowplow/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Sql</title>
       <link>https://darwinleung.github.io/tags/sql/</link>
-      <pubDate>Wed, 04 Apr 2018 12:00:00 -0400</pubDate>
+      <pubDate>Sat, 01 Sep 2018 12:00:00 -0400</pubDate>
       
       <guid>https://darwinleung.github.io/tags/sql/</guid>
       <description></description>

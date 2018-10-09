@@ -6,10 +6,21 @@
     <description>Recent content in Data Processing on DL</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 12 May 2018 12:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Sat, 01 Sep 2018 12:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://darwinleung.github.io/categories/data-processing/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Modelling Snowplow event data notes</title>
+      <link>https://darwinleung.github.io/posts/2018-09-01-modelling-snowplow-event-data-notes/</link>
+      <pubDate>Sat, 01 Sep 2018 12:00:00 -0400</pubDate>
+      
+      <guid>https://darwinleung.github.io/posts/2018-09-01-modelling-snowplow-event-data-notes/</guid>
+      <description>Modelling Snowplow event data notes Goals:
+ Modelling pageviews level metric (timeonpage, scroll depth) Modelling sessions level metric (session count, session duration)  Note: All queries in this doc are NOT tested or validated, they are based on assumptions and my guess only for high level understanding only. Please always consult Snowflake and make modification accordingly before using them for production.
+Validating readily available metrics First, we would like to see if the pageviews count collected from Snowplow match roughly with the data we collected from GA:</description>
+    </item>
     
     <item>
       <title>How does imputation work</title>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Personal on DL</title>
+    <link>https://darwinleung.github.io/tags/personal/</link>
+    <description>Recent content in Personal on DL</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 01 Mar 2018 12:00:00 -0400</lastBuildDate>
+    
+	<atom:link href="https://darwinleung.github.io/tags/personal/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>First Post - 2018 Goals</title>
+      <link>https://darwinleung.github.io/posts/2018-03-01-first-post/</link>
+      <pubDate>Thu, 01 Mar 2018 12:00:00 -0400</pubDate>
+      
+      <guid>https://darwinleung.github.io/posts/2018-03-01-first-post/</guid>
+      <description>This is my first personal blog and this is my first blog post, building a blog is one of the goals I set in the beginning of 2018. 2018 would be my year of learning, I will spend my spare time on learning for both professionally and personally. I am lucky that there are many area overlapping.
+There are 3 main area I want to learn:
+Machine Learning As an aspiring data scientist, I need to build a strong foundation on statistical and machine learning and gain exposure in deep learning.</description>
+    </item>
+    
+  </channel>
+</rss>

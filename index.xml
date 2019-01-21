@@ -6,10 +6,20 @@
     <description>Recent content on DL</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 Sep 2018 12:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Sat, 15 Sep 2018 12:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://darwinleung.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Joining Uber</title>
+      <link>https://darwinleung.github.io/posts/2018-09-15-joining-uber/</link>
+      <pubDate>Sat, 15 Sep 2018 12:00:00 -0400</pubDate>
+      
+      <guid>https://darwinleung.github.io/posts/2018-09-15-joining-uber/</guid>
+      <description>I have decided to join Uber data science team for the next step in my career. I will be working in Marketing Analytics as a Data Analyst. The role is based in Toronto but my team is global. I am responsible for analytics support on the Rides business. I will be working very closely with the Canada marketing and operation team.
+Hiring process I was reached out by a recruiter from the ATG originally on Linkedin for a Data Engineer role.</description>
+    </item>
     
     <item>
       <title>Modelling Snowplow event data notes</title>
@@ -173,8 +183,8 @@ title: &amp;quot;Setting up this blog&amp;quot; date: 2018-03-25T14:47:00-04:00 
       <pubDate>Thu, 01 Mar 2018 12:00:00 -0400</pubDate>
       
       <guid>https://darwinleung.github.io/posts/2018-03-01-first-post/</guid>
-      <description>This is my first personal blog and this is my first blog post, building a blog is one of the goals I set in the beginning of 2018. 2018 would be my year of learning, I will spend my spare time on learning for both professionally and personally. I am lucky that there are many area overlapping.
-There are 3 main area I want to learn:
+      <description>This is my first personal blog and this is my first blog post, building a blog is one of the goals I set at the beginning of 2018. 2018 would be my year of learning, I will spend my spare time on learning for both professionally and personally. I am lucky that there are many areas overlapping.
+There are 3 main areas I want to learn:
 Machine Learning As an aspiring data scientist, I need to build a strong foundation on statistical and machine learning and gain exposure in deep learning.</description>
     </item>
     
@@ -185,7 +195,7 @@ Machine Learning As an aspiring data scientist, I need to build a strong foundat
       
       <guid>https://darwinleung.github.io/about/</guid>
       <description>My name is Darwin Leung, I am an aspiring data scientist based in Toronto, ON, Canada.
-Currently, I work in marketing analytics at Uber. Before joining Uber, I worked at Shared as the first hire in the data team, where I spent my time working on web analytics, building reporting dashboards and recommedation system.
+Currently, I work in data analytics at Uber. Before joining Uber, I worked at Shared, an online publisher, as the first hire in the data team, where I spent my time working on web analytics, building reporting dashboards and recommedation system.
 I studied Statistics at the University of Waterloo, with diverse co-op experience in technology, consulting, financial industries and the public sector.</description>
     </item>
     
@@ -195,8 +205,8 @@ I studied Statistics at the University of Waterloo, with diverse co-op experienc
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://darwinleung.github.io/contact/</guid>
-      <description>Website: https://darwinleung.github.io
-Email: darwinlkh@gmail.com</description>
+      <description>If you have any feedback or questions on blog content, feel free to send me an email at darwinlkh@gmail.com.
+For connecting on professional network, please send an invite on Linkedin with notes.</description>
     </item>
     
   </channel>

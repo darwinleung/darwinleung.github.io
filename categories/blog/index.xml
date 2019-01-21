@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on DL</title>
+    <link>https://darwinleung.github.io/categories/blog/</link>
+    <description>Recent content in Blog on DL</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 15 Sep 2018 12:00:00 -0400</lastBuildDate>
+    
+	<atom:link href="https://darwinleung.github.io/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Joining Uber</title>
+      <link>https://darwinleung.github.io/posts/2018-09-15-joining-uber/</link>
+      <pubDate>Sat, 15 Sep 2018 12:00:00 -0400</pubDate>
+      
+      <guid>https://darwinleung.github.io/posts/2018-09-15-joining-uber/</guid>
+      <description>I have decided to join Uber data science team for the next step in my career. I will be working in Marketing Analytics as a Data Analyst. The role is based in Toronto but my team is global. I am responsible for analytics support on the Rides business. I will be working very closely with the Canada marketing and operation team.
+Hiring process I was reached out by a recruiter from the ATG originally on Linkedin for a Data Engineer role.</description>
+    </item>
+    
+  </channel>
+</rss>
